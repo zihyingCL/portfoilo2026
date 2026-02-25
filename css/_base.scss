@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap");
+
+//== CSS 變數
+:root {
+  --font-primary: 'Inter', 'Helvetica Neue', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --color-text: #1e1e1e;
+  --color-text-light: #4a4a4a;
+  --color-text-lighter: #888;
+  --color-background: #fafafa;
+  --color-border: rgba(0, 0, 0, 0.05);
+  --color-accent: #a0a0a0;
+  --color-accent-dark: #333;
+  --transition-base: 0.3s ease;
+}
+
+//== 顏色
+$primary: #d1b26e;
+$primary-dark: #a18446;
+$dark: #212529;
+$light: #f8f9fa;
+$white: #ffffff;
+$gray: #6c757d;
+
+$text-main: #3f3f3f;
+$text-sub: #747474;
+$text-light: #b1b1b1;
+
+$table-line: #cacaca;
+$table-bg: #ebebeb;
+$table-hover: #f6f6f6;
+
+//== 字型
+$font-family-base: "Montserrat", "Noto Sans TC", sans-serif;
+
+//== 斷點
+$bp-xxl: 90rem; //1440px
+$bp-xl: 75rem; //1200px
+$bp-lg: 62rem; //992px
+$bp-md: 48rem; //768px
+$bp-sm: 36rem; //576px
+$bp-xs: 20rem; //320px
+
+/* ===== RESET & 基礎設定 ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Helvetica Neue", sans-serif;
+    background-color: #fafafa;
+    color: #1e1e1e;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 頁面切換過渡覆蓋層 */
+#page-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#page-transition-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}

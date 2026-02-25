@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品詳情 | Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/components.js"></script>
+</head>
+
+<body>
+    <div id="page-transition-overlay"></div>
+    <div id="navbar-placeholder"></div>
+
+    <main class="work-detail-page">
+        <div class="container">
+            <div class="detail-header">
+                <nav class="breadcrumb-nav">
+                    <a href="index.html">Index</a> / <span id="category-name">Loading...</span>
+                </nav>
+                <h1 id="work-title" class="large-title">載入中...</h1>
+                <div class="work-meta-top">
+                    <span id="work-year"></span>
+                    <div id="work-tags" class="tag-group"></div>
+                </div>
+            </div>
+
+            <!-- 原本的 .detail-hero-img 改成 Swiper 容器 -->
+            <div class="detail-hero-img swiper mySwiper">
+                <div class="swiper-wrapper" id="work-images-wrapper">
+                    <!-- 圖片將由 JavaScript 動態插入 -->
+                </div>
+                <!-- 如果需要分頁器、前後按鈕 -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <!-- 保留一個備用單圖區塊（可隱藏或不用） -->
+            <!-- <img id="work-cover" src="" alt="" style="display: none;"> -->
+
+            <div class="detail-content-grid">
+                <div class="content-main">
+                    <h3>Project Concept</h3>
+                    <p id="work-desc-long"></p>
+                </div>
+                <aside class="content-sidebar">
+                    <div class="sidebar-sticky">
+                        <div class="sidebar-item">
+                            <small>Service</small>
+                            <p>UI/UX Design</p>
+                        </div>
+                        <div id="work-links-container" class="sidebar-links"></div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const params = new URLSearchParams(window.location.search);
+            const workId = params.get('id');
+            if (!workId) return;
+
+            try {
+                const response = await fetch('data/works.json');
+                const works = await response.json();
+                const work = works.find(w => w.id === workId);
+                if (!work) return;
+
+                // 填充基本資訊
+                document.getElementById('work-title').innerText = work.title;
+                document.getElementById('category-name').innerText = work.category === 'web' ? 'Web Design' : 'Graphic Design';
+                document.getElementById('work-year').innerText = work.date ? work.date.split('-')[0] : '';
+                document.getElementById('work-desc-long').innerText = work.description_long || work.desc || '';
+
+                // 渲染 Tags
+                const tagGroup = document.getElementById('work-tags');
+                if (work.tags) {
+                    tagGroup.innerHTML = work.tags.map(tag => `<span class="badge">${tag}</span>`).join('');
+                }
+
+                // 渲染側邊連結
+                const linkContainer = document.getElementById('work-links-container');
+                if (work.links) {
+                    linkContainer.innerHTML = work.links.map(link => `
+          <a href="${link.url}" class="btn-outline" target="_blank">
+            <i class="${link.icon}"></i> ${link.label}
+          </a>
+        `).join('');
+                }
+
+                // 處理圖片區：優先使用 images 陣列（多圖幻燈片）
+                const wrapper = document.getElementById('work-images-wrapper');
+                if (work.images && work.images.length > 0) {
+                    // 渲染多張圖片到 swiper-wrapper
+                    wrapper.innerHTML = work.images.map(src => `
+          <div class="swiper-slide"><img src="${src}" alt="${work.title}"></div>
+        `).join('');
+
+                    // 初始化 Swiper
+                    new Swiper('.mySwiper', {
+                        loop: true,
+                        lazy: true,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        observer: true,        // 監聽容器變化
+                        observeParents: true,  // 監聽父容器變化
+                    });
+                } else if (work.cover) {
+                    // 若無 images 但有 cover，顯示單張圖片（可放在 swiper 的第一張，或使用原本的單圖結構）
+                    wrapper.innerHTML = `<div class="swiper-slide"><img src="${work.cover}" alt="${work.title}"></div>`;
+                    // 隱藏導航按鈕（可選）
+                    document.querySelector('.swiper-pagination').style.display = 'none';
+                    document.querySelector('.swiper-button-prev').style.display = 'none';
+                    document.querySelector('.swiper-button-next').style.display = 'none';
+                    // 仍初始化 Swiper 但不啟用循環（或直接不用 Swiper）
+                    // 此處為了簡潔，不初始化，但保留樣式
+                } else {
+                    wrapper.innerHTML = '<div class="swiper-slide"><div class="no-image">No Image</div></div>';
+                }
+            } catch (error) {
+                console.error('載入作品資料失敗:', error);
+            }
+        });
+    </script>
+</body>
+
+</html>

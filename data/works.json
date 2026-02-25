@@ -1,0 +1,149 @@
+[
+  {
+    "id": "blog-2025",
+    "category": "web",
+    "title": "寂靜閱讀 · 個人部落格",
+    "date": "2025-02",
+    "cover": "images/work-blog.jpg",
+    "images": [
+      "images/spring-01.jpg",
+      "images/spring-02.jpg",
+      "images/spring-03.jpg"
+    ],
+    "intro": "簡約風格的內容平台，強調留白與字體層級。",
+    "description_long": "此專案初始需求是為了建立一個極簡的閱讀空間。在規劃上，我採用了非對稱排版，並透過 CSS Grid 實現響應式佈局...",
+    "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "RWD"
+    ],
+    "links": [
+      {
+        "label": "查看線上範例",
+        "url": "https://example.com",
+        "icon": "fas fa-external-link-alt"
+      }
+    ],
+    "isFeatured": true
+  },
+  {
+    "id": "brand-2024",
+    "category": "web",
+    "title": "選物品牌 · 形象官網",
+    "date": "2024-11",
+    "cover": "images/work-select.jpg",
+    "images": [
+      "images/spring-01.jpg",
+      "images/spring-02.jpg",
+      "images/spring-03.jpg"
+    ],
+    "intro": "RWD 切版，包含產品展示、動畫效果。",
+    "description_long": "品牌核心為「生活美學」，因此在視覺上大量使用了大地色調與柔和的轉場動畫...",
+    "tags": [
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "#",
+        "icon": "fas fa-code"
+      }
+    ],
+    "isFeatured": true
+  },
+  {
+    "id": "brand-2024",
+    "category": "web",
+    "title": "選物品牌 · 形象官網",
+    "date": "2024-11",
+    "cover": "images/work-select.jpg",
+    "images": [
+      "images/spring-01.jpg",
+      "images/spring-02.jpg",
+      "images/spring-03.jpg"
+    ],
+    "intro": "RWD 切版，包含產品展示、動畫效果。",
+    "description_long": "品牌核心為「生活美學」，因此在視覺上大量使用了大地色調與柔和的轉場動畫...",
+    "tags": [
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "#",
+        "icon": "fas fa-code"
+      }
+    ],
+    "isFeatured": true
+  },
+  {
+    "id": "brand-2024",
+    "category": "web",
+    "title": "選物品牌 · 形象官網",
+    "date": "2024-11",
+    "cover": "images/work-select.jpg",
+    "images": [
+      "images/spring-01.jpg",
+      "images/spring-02.jpg",
+      "images/spring-03.jpg"
+    ],
+    "intro": "RWD 切版，包含產品展示、動畫效果。",
+    "description_long": "品牌核心為「生活美學」，因此在視覺上大量使用了大地色調與柔和的轉場動畫...",
+    "tags": [
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "#",
+        "icon": "fas fa-code"
+      }
+    ],
+    "isFeatured": true
+  },
+  {
+    "id": "spring-2024",
+    "category": "graphic",
+    "type": "平面 / 社群Banner",
+    "year": "2024",
+    "title": "春夏服飾系列視覺",
+    "desc": "為服裝品牌設計的一組社群貼文與廣告banner，柔和色調與排版。",
+    "links": [
+      {
+        "label": "詳情",
+        "url": "work-detail.html?id=spring-2024",
+        "icon": "fas fa-arrow-right"
+      }
+    ],
+    "isFeatured": true
+  },
+  {
+    "id": "brand-2024",
+    "category": "graphic",
+    "title": "選物品牌 · 形象官網",
+    "date": "2024-11",
+    "cover": "images/work-select.jpg",
+    "images": [
+      "images/spring-01.jpg",
+      "images/spring-02.jpg",
+      "images/spring-03.jpg"
+    ],
+    "intro": "RWD 切版，包含產品展示、動畫效果。",
+    "description_long": "品牌核心為「生活美學」，因此在視覺上大量使用了大地色調與柔和的轉場動畫...",
+    "tags": [
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "#",
+        "icon": "fas fa-code"
+      }
+    ],
+    "isFeatured": true
+  }
+]

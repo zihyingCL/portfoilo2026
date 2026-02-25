@@ -1,0 +1,53 @@
+/* 作品詳情頁 Swiper 樣式 */
+.work-detail-page {
+  .detail-hero-img.swiper {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 比例，可依需求調整 */
+    margin-bottom: 40px;
+    overflow: hidden;
+    border-radius: 0; /* 配合整體直角風格 */
+
+    .swiper-wrapper {
+      height: 100%;
+    }
+
+    .swiper-slide {
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 確保圖片填滿容器且不變形 */
+        display: block;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      background: #aaa;
+      opacity: 0.5;
+      &-active {
+        background: #333;
+        opacity: 1;
+      }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #333;
+      background: rgba(255,255,255,0.8);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      &::after {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  // 若沒有多圖，隱藏按鈕（由 JS 控制顯示隱藏）
+  .swiper-pagination.hidden,
+  .swiper-button-prev.hidden,
+  .swiper-button-next.hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,45 @@
+/* ===== 動畫輔助 (統一使用 .animate) ===== */
+.animate {
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.2, 0.9, 0.3, 1),
+                transform 0.8s cubic-bezier(0.2, 0.9, 0.3, 1);
+    will-change: opacity, transform;
+
+    // 當觸發顯示時
+    &.appear {
+        opacity: 1;
+        transform: none !important;
+    }
+
+    // 定義各種動畫效果
+    $effects: (
+        "fade-up": translateY(30px),
+        "fade-down": translateY(-30px),
+        "fade-left": translateX(-30px),
+        "fade-right": translateX(30px),
+        "zoom-in": scale(0.8),
+        "zoom-out": scale(1.2),
+        "flip-in-x": perspective(400px) rotateX(90deg),
+        "flip-in-y": perspective(400px) rotateY(90deg)
+    );
+
+    @each $name, $value in $effects {
+        &.#{$name} {
+            transform: $value;
+
+            @if $name == "flip-in-x" {
+                transform-origin: top;
+            }
+            @if $name == "flip-in-y" {
+                transform-origin: left;
+            }
+        }
+    }
+}
+
+// 延遲時間迴圈 (1-5)
+@for $i from 1 through 5 {
+    .delay-#{$i} {
+        transition-delay: $i * 0.1s;
+    }
+}
