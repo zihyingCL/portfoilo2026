@@ -1,0 +1,104 @@
+/*日期jq*/
+.dtp {
+    background: rgba(0, 0, 0, 0.7);
+    div.dtp-picker-month {
+        padding: 0px 0 15px !important;
+    }
+    div.dtp-time,
+    div.dtp-date {
+        background: var(--color-primary);
+        opacity: 0.85;
+        padding-bottom: 7px;
+        > div:last-child {
+            margin-top: 0.3rem !important;
+            i {
+                margin-top: 0.1rem;
+            }
+        }
+        .p10 > a {
+            color: #fff;
+        }
+    }
+    .year-picker-item:hover,
+    .year-picker-item.active {
+        color: var(--color-primary);
+        font-size: 1.2rem;
+    }
+    .year-picker-item {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1rem;
+    }
+    div.dtp-actual-year {
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 0.3rem;
+    }
+    table.dtp-picker-days tr > th {
+        background: transparent;
+        border-bottom: 1px solid var(--text-sub);
+    }
+    .dtp-content > .dtp-date-view > header.dtp-header,
+    table.dtp-picker-days tr > td > a.selected {
+        background: var(--color-primary);
+    }
+    div.dtp-picker {
+        padding-bottom: 0.2em;
+        background: var(--color-secondary);
+        // border-top: 1px solid var(--text-sub);
+    }
+
+    .dtp-picker-month,
+    .dtp-buttons,
+    .table > :not(caption) > * > *,
+    table.dtp-picker-days tr > td > a,
+    .dtp-picker-time > a {
+        background: var(--color-secondary);
+        color: white;
+    }
+
+    .btn-default {
+        padding: 0 !important;
+    }
+    &-close {
+        right: 0;
+        a {
+            padding: 10px;
+        }
+    }
+    .btn {
+        &-flat {
+            border-radius: 5rem;
+            border-width: 1px;
+            border-style: solid;
+            font-size: 1rem;
+            letter-spacing: 0.11rem;
+            font-weight: 400;
+            padding: 0.3rem 1rem;
+        }
+    }
+    &-btn {
+        &-ok {
+            background: var(--primary-gradient);
+            color: white;
+            border-color: var(--color-primary-light);
+            &:hover {
+                background: var(--color-primary);
+                color: #fff;
+            }
+        }
+        &-cancel {
+            color: white;
+            border-color: white;
+            margin-right: 0.8rem;
+            &:hover {
+                background-color: #ffffff29;
+            }
+        }
+    }
+
+    > .dtp-content {
+        border-radius: $radius-sm;
+        .dtp-header {
+            border-radius: $radius-sm $radius-sm 0px 0px;
+        }
+    }
+}

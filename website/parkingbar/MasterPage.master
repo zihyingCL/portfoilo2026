@@ -1,0 +1,39 @@
+﻿<%@ Master Language="VB" %>
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <title>停車吧</title>
+    <meta name="keywords" content="停車吧" />
+    <meta name="description" content="停車吧" />
+    <meta name="author" content="肯驛國際(股)公司 CanLead" />
+    <meta name="copyright" content="本網頁著作權肯驛國際(股)公司 CanLead 所有" />
+
+    <link rel="shortcut icon" href="https://cdn.canlead.com.tw/_img/canlead/favicon.ico">
+    <meta property="og:image" content="https://cdn.canlead.com.tw/_img/canlead/image.jpg">
+    
+    <!-- #Include file="/_common/_settings_PARKING.aspx" -->
+
+</head>
+<body>
+    <script>
+        AOS.init({
+            duration: 1500,
+            easing: 'ease-in-out-back',
+            once: true
+        });
+    </script>
+    <div class="wrapper">
+        <form id="form1" runat="server" class="jsForm">
+                <!-- #Include file="_nav.aspx" -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+        </form>
+     </div>
+    <!-- #Include file="/_common/_footer.aspx" -->
+
+    <!-- #Include file="_tc.aspx" -->
+    <script src="/_common/_js/main.js"></script>
+</body>
+</html>

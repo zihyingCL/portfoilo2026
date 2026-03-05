@@ -1,0 +1,13 @@
+<svg width="108" height="65" viewBox="0 0 108 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M87.2078 34.3073H71.3701V22.4395" stroke="#444444" stroke-width="3.26616" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.8486 16.7822V11.5598C26.8486 10.146 27.7969 9 28.9665 9H61.3204C62.4901 9 63.4384 10.146 63.4384 11.5598V50.9444" stroke="#444444" stroke-width="3.26616" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M72.126 51.1724H29.2044C27.7481 51.1724 26.5674 50.0178 26.5674 48.5935V37.6426" stroke="#444444" stroke-width="3.26616" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64.3301 16.7539H78.9372C80.5291 16.7539 82.0366 17.4542 83.0424 18.661L90.8138 27.9853C92.7993 30.3675 93.8836 33.3467 93.8836 36.42V48.5933C93.8836 50.0176 92.7029 51.1722 91.2464 51.1722H64.3301" stroke="#444444" stroke-width="3.26616" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M49.5524 51.1716C49.5524 55.4808 45.9801 58.9763 41.5716 58.9763C37.1631 58.9763 33.5908 55.4808 33.5908 51.1716C33.5908 46.8604 37.1631 43.3672 41.5716 43.3672C45.9801 43.3672 49.5524 46.8604 49.5524 51.1716Z" fill="white" stroke="#444444" stroke-width="3.26616" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M86.5385 51.1716C86.5385 55.4808 82.9662 58.9763 78.5577 58.9763C74.1492 58.9763 70.5771 55.4808 70.5771 51.1716C70.5771 46.8604 74.1492 43.3672 78.5577 43.3672C82.9662 43.3672 86.5385 46.8604 86.5385 51.1716Z" fill="white" stroke="#444444" stroke-width="3.26616" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.709 30.9561H38.5278" stroke="#FF8000" stroke-width="3.26616" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 23.9941H31.1424" stroke="#FF8000" stroke-width="3.26616" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.1396 17.0312H41.6055" stroke="#FF8000" stroke-width="3.26616" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="41.573" cy="51.1722" rx="1.47823" ry="1.44562" fill="#444444"/>
+<ellipse cx="78.5573" cy="51.1722" rx="1.47823" ry="1.44562" fill="#444444"/>
+</svg>

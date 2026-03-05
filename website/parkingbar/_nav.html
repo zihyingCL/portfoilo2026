@@ -1,0 +1,44 @@
+﻿<header class="header" id="header">
+    <a class="navbar-brand logo" href="index.aspx">
+        <h1>
+            <img src="/_common/_img/logo.svg" />
+            <!-- <hr>
+            <img src="https://cdn.canlead.com.tw/_img/canlead/logo_white.svg" /> -->
+        </h1>
+    </a>
+
+    <img src="https://cdn.canlead.com.tw/_img/esunbank/logo.svg" class="logo__bank">
+
+    <nav class="navbar navbar-expand-lg p-0 ms-auto">
+        <a class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <div class="hamburger">
+                <div class="menui"></div>
+                <div class="menui"></div>
+                <div class="menui"></div>
+            </div>
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li><a data-bs-toggle="modal" data-bs-target="#tc">立即預約</a></li>
+                <li><a href="index.aspx#feature">VIP 停車場介紹</a></li>
+                <li><a href="index.aspx#order">服務說明</a></li>
+                <li><a data-bs-toggle="modal" data-bs-target="#tc">權益說明</a></li>
+                <li><a href="FAQ.aspx">常見問題</a></li>
+                <li><a href="OrderSearch.aspx">訂單查詢</a></li>
+            </ul>
+        </div>
+
+    </nav>
+</header>
+
+<script>
+    var backdrop = '<div class="modal-backdrop fade show"></div>'
+    $(".navbar-toggler").click(function () {
+        if ($(this).hasClass("collapsed")) {
+            $(".modal-backdrop").remove();
+        } else {
+            $("form").append(backdrop);
+        }
+    })
+</script>

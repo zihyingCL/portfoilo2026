@@ -1,0 +1,102 @@
+.modal {
+    &-dialog.tc {
+        margin: 0rem;
+        max-width: 100vw;
+        width: 100%;
+        max-height: 100vh;
+        height: 100%;
+    }
+    &-content.tc {
+        border-radius: 0px;
+        border: none;
+        background: $bg-color;
+        height: 100vh;
+        position: relative;
+        overflow-y: scroll;
+    }
+    
+    .logo {
+        position: fixed;
+        top: 0;
+        left: 5rem;
+        @media (max-width: 1900px) {
+            left: 2rem;
+        }
+        @media (max-width: 1720px) {
+            display: none;
+        }
+    }
+
+    .btn-close {
+        background-size: contain;
+        width: 1.5rem;
+        height: 1.5rem;
+        position: fixed;
+        top: 5rem;
+        right: 5rem;
+        
+        @media (max-width: $bp-md) {
+            top: 3rem;
+            right: 3rem;
+        }    
+        @media (max-width: $bp-sm) {
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+    }
+    .main-field {
+        padding: 6rem 0rem 10rem;
+
+        h4 {
+            font-weight: 350;
+            font-size: 24px;
+            letter-spacing: 0.2rem;
+            color: var(--text-main);
+            &:not(:first-of-type) {
+                padding-top: 1rem;
+            }
+        }
+        p {
+            letter-spacing: 0.1rem;
+        }
+
+        @media (max-width: $bp-lg) {
+            padding: 5rem 2rem 14rem;
+        }
+
+        @media (max-width: $bp-sm) {
+            padding: 5rem 2rem 18rem;
+        }
+    }
+
+    &-foot {
+        background: var(--color-secondary);
+        width: 100%;
+        padding: 1.5rem 0rem;
+        position: fixed;
+        bottom: 0;
+        animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation-delay: 0.5s;
+
+        label {
+            font-weight: 400;
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
+            color: #ffffff;
+            @media (max-width: $bp-lg) {
+                font-size: 0.9rem;
+            }
+        }
+
+        .btn-row {
+            padding-left: 3rem;
+            margin-left: 3rem;
+            border-left: 1px solid var(--text-sub);
+            @media (max-width: $bp-lg) {
+                padding: 1rem 1.5rem 0rem 0rem;
+                margin-left: auto;
+                border: none;
+            }
+        }
+    }
+}

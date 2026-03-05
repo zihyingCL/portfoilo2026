@@ -1,0 +1,177 @@
+////////////////////////////////////////////////
+// table
+
+.table-1 {
+    width: 100%;
+    color: var(--color-text);
+    font-size: 1rem;
+
+    th,
+    td {
+        padding: 0.5rem 0.8rem;
+        text-align: center;
+        vertical-align: middle;
+        background-color: white;
+    }
+
+    thead {
+        th {
+            background-color: var(--color-primary);
+            color: white;
+            font-size: 0.9rem;
+            line-height: 1.3rem;
+        }
+    }
+
+    tbody {
+        tr {
+            border-bottom: 1px solid var(--color-table-line);
+            &:hover {
+                td,
+                th {
+                    filter: brightness(0.95)
+                }
+            }
+            &:nth-child(odd) {
+                filter: brightness(0.97) saturate(100%);
+            }
+        }
+        th {
+            background-color: var(--color-primary-light);
+            font-weight: 400;
+        }
+    }
+}
+
+.table-2 {
+    width: 100%;
+    background-color: white;
+
+    td, th {
+        padding: 0.8rem;
+        border: 1px solid;
+        border-color: var(--color-table-line);
+    }
+
+    thead > tr {
+        background-color: var(--color-primary);
+        color: white;
+        text-align: center;
+    }
+
+    tbody,
+    tfoot {
+        th {
+            background-color: var(--color-primary-light);
+            text-align: center;
+        }
+    }
+
+    tfoot > tr {
+        background-color: #000;
+        color: white;
+    }
+}
+
+.table-rwd {
+    .t-noshow {
+        display: none;
+    }
+
+    @media only screen and (max-width: $bp-md) {
+        min-width: 100%;
+        th,
+        td {
+            text-align: left;
+            overflow: hidden;
+            width: 100%;
+            display: block;
+        }
+
+        thead {
+            display: none;
+        }
+
+        th:first-child {
+            background-color: var(--color-primary);
+            color: white;
+            &:before {
+                content: attr(data-th) " : ";
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-right: 0.5rem;
+            }
+        }
+
+        th:before,
+        td:before {
+            content: attr(data-th) " : ";
+            display: inline-block;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .t-noshow {
+            display: block;
+        }
+
+        .t-rwd-hide {
+            display: none;
+        }
+
+        tbody tr td:nth-child(1) {
+            background-color: var(--color-primary);
+            color: white;
+        }
+    }
+}
+
+.table-rwd-2 {
+    .t-noshow {
+        display: none;
+    }
+    @media only screen and (max-width: $bp-md) {
+        min-width: 100%;
+        th,
+        td {
+            text-align: left;
+            overflow: hidden;
+            width: 100%;
+            display: block;
+        }
+
+        thead {
+            display: none;
+        }
+
+        th {
+            background-color: var(--color-primary-light);
+            color: var(--color-text);
+            &:before {
+                content: attr(data-th) " : ";
+                display: inline-block;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-right: 0.5rem;
+            }
+            &[data-th="洲別"] {
+                background-color: var(--color-primary);
+                color: white;
+            }
+        }
+
+        td:before {
+            content: attr(data-th) " : ";
+            display: inline-block;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .t-rwd-hide {
+            display: none;
+        }
+    }
+}

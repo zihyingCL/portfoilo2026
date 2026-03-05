@@ -1,0 +1,315 @@
+label {
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.3rem;
+    width: 100%;
+    text-align: left;
+}
+input {
+    &:focus, &:focus-visible {
+        outline: 1px solid var(--color-primary);
+    }
+
+    &.warning {
+        outline: 2px solid $color-warning; 
+    }
+
+    &[type="text"],
+    &[type="number"] {
+        padding: 0.5rem 0.8rem;
+        color: var(--text-main);
+        border-radius: $radius-sm;
+        border: 1px solid $line-color;
+        background: #fff;
+
+        @media (max-width: $bp-sm) {
+            padding: 0.4rem 0.7rem;
+        }
+
+        &::placeholder {
+            color: var(--text-sub);
+        }
+        &[disabled="true"],
+        &:disabled {
+            background-color: $disable-color;
+            color: var(--text-main);
+        }
+        &.date-picker {
+            padding: 0.8rem;
+            color: var(--text-main);
+            border-radius: $radius-sm;
+            border: 1px solid $line-color;
+            display: block;
+            background-color: #fff;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            transition:
+                border-color 0.15s ease-in-out,
+                box-shadow 0.15s ease-in-out;
+            appearance: none;
+        }
+    }
+    &[type="radio"],
+    &[type="checkbox"] {
+        display: none;
+    }
+
+    &[type="radio"] + label,
+    &[type="checkbox"] + label {
+        position: relative;
+        padding-left: 3rem;
+        padding-right: 2rem;
+        margin: 0.5rem 0rem;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        transition: all 0.2s;
+
+        line-height: 1.5rem;
+
+        &[for="agree"] {
+            font-size: 0.9rem;
+        }
+
+        &:hover {
+            color: var(--color-primary);
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            height: 20px;
+            width: 20px;
+            border: 1px solid $line-color;
+            position: absolute;
+            left: 10px;
+            top: 2px;
+            border-radius: $radius-sm;
+        }
+    }
+
+    &[type="checkbox"] + label {
+        &::before {
+            // top: 4px;
+            border: 1ps solid var(--color-primary-light);
+            background-color: $bg-color;
+        }
+    }
+
+    &[type="radio"] + label {
+        &::before {
+            border-radius: 100rem;
+        }
+    }
+
+    &[type="checkbox"]:checked + label {
+        &::before {
+            background-color: var(--color-primary);
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+        }
+    }
+
+    &[type="radio"]:checked + label {
+        &::before {
+            background-color: var(--color-primary);
+        }
+        &::after {
+            content: "";
+            display: block;
+            height: 8px;
+            width: 8px;
+            background-color: white;
+            border-radius: 100rem;
+            position: absolute;
+            left: 16px;
+            top: 8px;
+        }
+    }
+
+    &[type="radio"]:disabled + label,
+    &[type="checkbox"]:disabled + label {
+        cursor: default;
+        pointer-events: none;
+        color: rgba(0, 0, 0, 0.25);
+
+        &::before {
+            border-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+select {
+    padding: 0.8rem;
+    color: var(--text-main);
+    border-radius: $radius-sm;
+    border: 1px solid $line-color;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    transition:
+        border-color 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out;
+    appearance: none;
+    &[disabled="true"],
+    &:disabled {
+        background-color: $disable-color;
+    }
+    option {
+        &[hidden] {
+            color: var(--text-sub);
+        }
+    }
+    &:focus, &:focus-visible {
+        outline: 1px solid var(--color-primary);
+    }
+    &.warning {
+        outline: 2px solid $color-warning; 
+    }
+}
+
+.btn {
+    border-radius: 5rem;
+    border-width: 1px;
+    border-style: solid;
+    font-size: 1.25rem;
+    letter-spacing: 0.11rem;
+    font-weight: 300;
+    padding: 0.5rem 2rem;
+
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+
+    @media (max-width: $bp-lg) {
+        font-size: 1.1rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    &.disabled {
+        opacity: 0.3;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        font-weight: 400;
+    }
+
+    &-main {
+        background: var(--primary-gradient);
+        background-size: 200% 200%;
+        
+        color: white;
+        border-color: var(--color-primary-light);
+
+        &:hover {
+            background: var(--primary-gradient-reverse);
+            border-color: var(--color-primary-light);
+            color: white;
+        }
+    }
+    &-sub {
+        color: var(--text-main);
+        border-color: var(--text-main);
+        &.opposite {
+            color: white;
+            border-color: var(--text-sub);
+            &:hover {
+                background-color: var(--text-main);
+                color: white;
+            }
+        }
+        &:hover {
+            background-color: $line-color;
+            border-color:  var(--text-sub);
+            color: var(--text-main);
+        }
+    }
+
+    &-row {
+        @extend %flex-box;
+        gap: 1rem;
+    }
+}
+
+#windowAlert {
+    pointer-events: none;
+    z-index: 2000;
+
+    .modal-content {
+        border-radius: $radius-sm;
+    }
+    .box {
+        padding: 0;
+    }
+}
+
+#windowAlertMsg {
+    font-size: 1rem;
+}
+
+.loader-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: 0.75);
+    height: 100vh;
+    width: 100vw;
+    z-index: 1035;
+
+    &__txt {
+        display: block;
+        color: var(--color-primary);
+        z-index: 55;
+        font-weight: normal;
+        font-size: 15px;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.loader-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 1rem 0;
+    width: 100px;
+    overflow: hidden;
+
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+
+.dot-carousel {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    color: var(--color-primary);
+    box-shadow: 9984px 0 0 0 var(--color-primary), 9999px 0 0 0 var(--color-primary), 10014px 0 0 0 var(--color-primary);
+    animation: dotCarousel 1.5s infinite linear;
+}
+
+@keyframes dotCarousel {
+    0% {
+        box-shadow: 9984px 0 0 -1px var(--color-primary), 9999px 0 0 1px var(--color-primary), 10014px 0 0 -1px var(--color-primary);
+    }
+    50% {
+        box-shadow: 10014px 0 0 -1px var(--color-primary), 9984px 0 0 -1px var(--color-primary), 9999px 0 0 1px var(--color-primary);
+    }
+    100% {
+        box-shadow: 9999px 0 0 1px var(--color-primary), 10014px 0 0 -1px var(--color-primary), 9984px 0 0 -1px var(--color-primary);
+    }
+}

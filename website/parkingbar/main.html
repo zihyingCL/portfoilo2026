@@ -1,0 +1,663 @@
+﻿<%-- <%@ Page Title="" Language="VB" MasterPageFile="MasterPage.master" %>
+    <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server"> --%>
+
+        <div class="hotel-calendar">
+            <div class="hotel-calendar__top">
+                <a class="hotel-calendar__btn" href="javascript:;"> <i
+                        class="hotel-calendar__btn-arrow hc-left"></i></a>
+                <span class="hotel-calendar__title">10月 2024</span>
+                <a class="hotel-calendar__btn" href="javascript:;"><i
+                        class="hotel-calendar__btn-arrow hc-right"></i></a>
+            </div>
+            <div class="hotel-calendar__table">
+                <div class="hotel-calendar__tr hc-week">
+                    <div class="hotel-calendar__td hc-weekend">日</div>
+                    <div class="hotel-calendar__td">一</div>
+                    <div class="hotel-calendar__td">二</div>
+                    <div class="hotel-calendar__td">三</div>
+                    <div class="hotel-calendar__td">四</div>
+                    <div class="hotel-calendar__td">五</div>
+                    <div class="hotel-calendar__td hc-weekend">六</div>
+                </div>
+                <div class="hotel-calendar__tr">
+                    <div class="hotel-calendar__td hc-md-hidden">
+                        <div class="hc-week"><span class="hc-weekend">日</span></div>
+                    </div>
+                    <div class="hotel-calendar__td hc-md-hidden">
+                        <div class="hc-week"><span class="">一</span></div>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">二</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">1</span>
+                            <span class="hotel-calendar__cell__text">
+                                已預約：999
+                            </span>
+                            <p class="hotel-calendar__cell__price">
+                                <span>
+                                    剩餘：999
+                                </span>
+                            </p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">三</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">2</span><span
+                                class="hotel-calendar__cell__text">已預約：999</span>
+                            <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">四</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">3</span>
+                            <span class="hotel-calendar__cell__text">
+                                已預約：999
+                            </span>
+                            <p class="hotel-calendar__cell__price">
+                                <span>
+                                    剩餘：999
+                                </span>
+                            </p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="hc-weekend">五</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">4</span><span
+                                class="hotel-calendar__cell__text">已預約：999</span>
+                            <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="hc-weekend">六</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">5</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="hotel-calendar__tr">
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="hc-weekend">日</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">6</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">一</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">7</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">二</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">8</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">三</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">9</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">四</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">10</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">五</span></div><button type="button"
+                            class="hotel-calendar__cell"><span
+                                class="hotel-calendar__cell__date">11</span><span
+                                class="hotel-calendar__cell__text">已預約：999</span>
+                            <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p></button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="hc-weekend">六</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">12</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="hotel-calendar__tr">
+                    <div class="hotel-calendar__td ">
+                        <div class="hc-week"><span class="hc-weekend">日</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">13</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">一</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">14</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">二</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">15</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">三</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">16</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">四</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">17</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">五</span></div><button type="button"
+                            class="hotel-calendar__cell"><span
+                                class="hotel-calendar__cell__date">18</span><span
+                                class="hotel-calendar__cell__text">已預約：999</span>
+                            <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p></button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="hc-weekend">六</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">19</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="hotel-calendar__tr">
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="hc-weekend">日</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">20</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">一</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">21</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">二</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">22</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">三</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">23</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">四</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">24</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td hc-md-hidden">
+                        <div class="hc-week"><span class="">五</span></div><button type="button"
+                            class="hotel-calendar__cell"><span
+                                class="hotel-calendar__cell__date">25</span><span
+                                class="hotel-calendar__cell__text">已預約：999</span>
+                            <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p></button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="hc-weekend">六</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">26</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                </div>
+                <div class="hotel-calendar__tr">
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="hc-weekend">日</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">27</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">一</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">28</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">二</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">29</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">三</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">30</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td">
+                        <div class="hc-week"><span class="">四</span></div><button type="button"
+                            class="hotel-calendar__cell"><span class="hotel-calendar__cell__date">31</span><span
+                            class="hotel-calendar__cell__text">已預約：999</span>
+                        <p class="hotel-calendar__cell__price"><span>剩餘：999</span></p>
+                        </button>
+                    </div>
+                    <div class="hotel-calendar__td hc-md-hidden">
+                        <div class="hc-week"><span class="">五</span></div>
+                    </div>
+                    <div class="hotel-calendar__td hc-md-hidden">
+                        <div class="hc-week"><span class="hc-weekend">六</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <style>
+            .hotel-calendar {
+                width: 100%;
+                background-color: white;
+                border: 1px solid #ced4da;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            .hotel-calendar button:focus {
+                outline: none !important;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+            }
+
+            .hotel-calendar__top {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                padding: 0.6rem 1rem;
+                color: white;
+                background-color: #5d4c16;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__top {
+                    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+                }
+            }
+
+            .hotel-calendar__title {
+                font-weight: bold;
+                font-size: 18px;
+            }
+
+            @media only screen and (max-width: 991px) {
+                .hotel-calendar__title {
+                    font-size: 16.5px;
+                }
+            }
+
+            .hotel-calendar__btn {
+                border: none;
+                background-color: transparent;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                display: block;
+                text-align: center;
+            }
+
+            .hotel-calendar__btn-arrow {
+                border: solid white;
+                border-width: 0px 2px 2px 0;
+                display: inline-block;
+                padding: 5px;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+            }
+
+            @media only screen and (max-width: 991px) {
+                .hotel-calendar__btn-arrow {
+                    padding: 4px;
+                }
+            }
+
+            .hotel-calendar__btn-arrow.hc-left {
+                -webkit-transform: rotate(135deg);
+                transform: rotate(135deg);
+            }
+
+            .hotel-calendar__btn-arrow.hc-right {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+
+            .hotel-calendar__btn:hover .hotel-calendar__btn-arrow {
+                border-color: #e9d8a2;
+            }
+
+            .hotel-calendar__btn.disabled {
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .hotel-calendar__btn:disabled .hotel-calendar__btn-arrow,
+            .hotel-calendar__btn.disabled .hotel-calendar__btn-arrow {
+                border-color: rgba(16, 16, 16, 0.35);
+            }
+
+            .hotel-calendar__table {
+                display: table;
+                width: 100%;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__table {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    height: 305px;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                }
+            }
+
+            .hotel-calendar__tr {
+                display: table-row;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__tr {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                }
+
+                .hotel-calendar__tr.hc-week {
+                    display: none;
+                }
+            }
+
+            .hotel-calendar__td {
+                display: table-cell;
+                text-align: center;
+                padding: 0.25rem;
+                color: #160a0a;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+                width: 14.28%;
+                border: 0.5px solid #ced4da;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__td {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    width: 100%;
+                    padding: 0;
+                }
+
+                .hotel-calendar__td.hc-md-hidden {
+                    display: none;
+                }
+            }
+
+            .hotel-calendar__td.hc-weekend,
+            .hotel-calendar__td span.hc-weekend {
+                background-color: rgba(155, 126, 36, 0.15);
+            }
+
+            .hotel-calendar__td .hc-week {
+                display: none;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__td .hc-week {
+                    display: block;
+                    min-width: 15%;
+                    -ms-flex-preferred-size: 15%;
+                    flex-basis: 15%;
+                    border-bottom: 1px solid white;
+                }
+            }
+
+            .hotel-calendar__td .hc-week>span {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            .hotel-calendar .hc-week {
+                background-color: rgba(155, 126, 36, 0.2);
+            }
+
+            .hotel-calendar__tr:not(:last-child) .hotel-calendar__td {
+                border-bottom: 1px solid #ced4da;
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__tr:not(:last-child) .hotel-calendar__td {
+                    border: none;
+                }
+            }
+
+            .hotel-calendar__tr:hover,
+            .hotel-calendar__td.hc-hover {
+                background-color: rgba(155, 126, 36, 0.1);
+            }
+
+            @media only screen and (max-width: 767px) {
+
+                .hotel-calendar__tr:hover,
+                .hotel-calendar__td.hc-hover {
+                    background-color: transparent;
+                }
+            }
+
+            .hotel-calendar__cell {
+                background-color: transparent;
+                border: none;
+                border-radius: 5px;
+                color: #160a0a;
+                padding: 0.6rem 0.5rem 0.4rem 0.5rem;
+                -webkit-transition: all 0.2s;
+                transition: all 0.2s;
+                width: 100%;
+                cursor: pointer;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -webkit-box-align: end;
+                -ms-flex-align: end;
+                align-items: flex-end;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: flex-start;
+            }
+
+            @media only screen and (max-width: 991px) {
+                .hotel-calendar__cell {
+                    line-height: 1.4rem;
+                }
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__cell {
+                    margin: 0.2rem;
+                    padding: 0.5rem;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                }
+            }
+
+            .hotel-calendar__cell__date {
+                font-size: 22.5px;
+                min-width: 30px;
+                -ms-flex-preferred-size: 30px;
+                flex-basis: 30px;
+                text-align: center;
+                color: inherit;
+            }
+
+            @media only screen and (max-width: 991px) {
+                .hotel-calendar__cell__date {
+                    font-size: 19.5px;
+                }
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__cell__date {
+                    min-width: 15%;
+                    -ms-flex-preferred-size: 15%;
+                    flex-basis: 15%;
+                    text-align: left;
+                }
+            }
+
+            .hotel-calendar__cell__text {
+                font-size: 15px;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                text-align: right;
+                color: inherit;
+            }
+
+            @media only screen and (max-width: 991px) {
+                .hotel-calendar__cell__text {
+                    min-width: 100%;
+                    -ms-flex-preferred-size: 100%;
+                    flex-basis: 100%;
+                }
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__cell__text {
+                    min-width: 40%;
+                    -ms-flex-preferred-size: 40%;
+                    flex-basis: 40%;
+                }
+            }
+
+            .hotel-calendar__cell__price {
+                min-width: 100%;
+                -ms-flex-preferred-size: 100%;
+                flex-basis: 100%;
+                font-size: 13.5px;
+                text-align: right;
+                color: #9b7e24;
+                margin-top: 0.3rem;
+                margin-bottom: 0px;
+            }
+
+            @media only screen and (max-width: 991px) {
+                .hotel-calendar__cell__price {
+                    margin-top: 0;
+                }
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__cell__price {
+                    min-width: 45%;
+                    -ms-flex-preferred-size: 45%;
+                    flex-basis: 45%;
+                }
+            }
+
+            .hotel-calendar__cell__price span {
+                margin-left: 0.3rem;
+                font-size: 19.5px;
+                font-weight: bold;
+            }
+
+            @media only screen and (max-width: 991px) {
+                .hotel-calendar__cell__price span {
+                    display: block;
+                    font-size: 18px;
+                }
+            }
+
+            @media only screen and (max-width: 767px) {
+                .hotel-calendar__cell__price span {
+                    display: inline-block;
+                }
+            }
+
+            .hotel-calendar__cell:hover {
+                color: #9b7e24;
+            }
+
+            .hotel-calendar__cell.disabled,
+            .hotel-calendar__cell:disabled {
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .hotel-calendar__cell:disabled,
+            .hotel-calendar__cell:disabled .hotel-calendar__cell__price,
+            .hotel-calendar__cell:disabled .hotel-calendar__cell__date,
+            .hotel-calendar__cell:disabled .hotel-calendar__cell__text,
+            .hotel-calendar__cell.disabled,
+            .hotel-calendar__cell.disabled .hotel-calendar__cell__price,
+            .hotel-calendar__cell.disabled .hotel-calendar__cell__date,
+            .hotel-calendar__cell.disabled .hotel-calendar__cell__text {
+                color: rgba(16, 16, 16, 0.35);
+            }
+
+            .hotel-calendar__cell.selected {
+                background-color: #7a631c;
+            }
+
+            .hotel-calendar__cell.selected,
+            .hotel-calendar__cell.selected .hotel-calendar__cell__price {
+                color: white;
+            }
+        </style>
+        <%-- </asp:Content> --%>

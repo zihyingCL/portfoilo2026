@@ -1,0 +1,196 @@
+@charset "UTF-8";
+input[type=radio] {
+  display: none;
+}
+
+.search-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.search-row button {
+  margin-left: 1rem;
+  border: #9b7e24;
+  color: white;
+  background-color: #9b7e24;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+}
+
+.btn-row {
+  margin: 3rem auto;
+}
+.btn-row label {
+  margin: 0.5rem;
+  width: auto;
+  height: auto;
+}
+.btn-row span {
+  background-color: white;
+  border: 1px solid white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: #9b7e24;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.btn-row input:checked + span {
+  background-color: #9b7e24;
+  border: 1px solid #9b7e24;
+  color: white;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  color: #262626;
+}
+.table thead tr th {
+  background-color: #9b7e24;
+  color: white;
+  padding: 0.5rem;
+  letter-spacing: 1px;
+}
+.table tbody tr {
+  background-color: white;
+}
+.table tbody tr:nth-child(even) {
+  background-color: #fcf9f5;
+}
+.table tbody tr td {
+  padding: 0.8rem 0.5rem;
+  color: #262626;
+}
+.table tbody tr:hover td {
+  background-color: #f0ede8;
+}
+
+input:focus, input:focus-visible {
+  outline: 1px solid #9b7e24;
+}
+input[type=text], input[type=number] {
+  padding: 0.5rem 0.8rem;
+  color: #262626;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  background: #fff;
+}
+input[type=text].date-picker, input[type=number].date-picker {
+  width: 10rem;
+  padding: 0.8rem;
+  color: #262626;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  display: block;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/*日期jq*/
+.dtp {
+  background: rgba(0, 0, 0, 0.7);
+}
+.dtp div.dtp-picker-month {
+  padding: 0px 0 15px !important;
+}
+.dtp div.dtp-time,
+.dtp div.dtp-date {
+  background: #9b7e24;
+  opacity: 0.85;
+  padding-bottom: 7px;
+}
+.dtp div.dtp-time > div:last-child,
+.dtp div.dtp-date > div:last-child {
+  margin-top: 0.3rem !important;
+}
+.dtp div.dtp-time > div:last-child i,
+.dtp div.dtp-date > div:last-child i {
+  margin-top: 0.1rem;
+}
+.dtp div.dtp-time .p10 > a,
+.dtp div.dtp-date .p10 > a {
+  color: #fff;
+}
+.dtp .year-picker-item:hover,
+.dtp .year-picker-item.active {
+  color: #9b7e24;
+  font-size: 1.2rem;
+}
+.dtp .year-picker-item {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1rem;
+}
+.dtp div.dtp-actual-year {
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.3rem;
+}
+.dtp table.dtp-picker-days tr > th {
+  background: transparent;
+  border-bottom: 1px solid #ced4da;
+}
+.dtp .dtp-content > .dtp-date-view > header.dtp-header,
+.dtp table.dtp-picker-days tr > td > a.selected {
+  background: #9b7e24;
+}
+.dtp div.dtp-picker {
+  padding-bottom: 0.2em;
+  background: #f0ede8;
+}
+.dtp .dtp-picker-month,
+.dtp .dtp-buttons,
+.dtp .table > :not(caption) > * > *,
+.dtp table.dtp-picker-days tr > td > a,
+.dtp .dtp-picker-time > a {
+  background: #f0ede8;
+  color: #262626;
+}
+.dtp .btn-default {
+  padding: 0 !important;
+}
+.dtp-close {
+  right: 0;
+}
+.dtp-close a {
+  padding: 10px;
+}
+.dtp .btn-flat {
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 1rem;
+  letter-spacing: 0.11rem;
+  font-weight: 400;
+  padding: 0.3rem 1rem;
+}
+.dtp-btn-ok {
+  background: #9b7e24;
+  color: white;
+  border-color: #9b7e24;
+}
+.dtp-btn-ok:hover {
+  background: #9b7e24;
+  color: #fff;
+}
+.dtp-btn-cancel {
+  color: #9b7e24;
+  border-color: #9b7e24;
+  margin-right: 0.8rem;
+}
+.dtp > .dtp-content {
+  border-radius: 4px;
+}
+.dtp > .dtp-content .dtp-header {
+  border-radius: 4px 4px 0px 0px;
+}

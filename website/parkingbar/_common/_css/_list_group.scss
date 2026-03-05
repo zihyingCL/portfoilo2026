@@ -1,0 +1,51 @@
+ol {
+    li {
+        line-height: 1.8rem;
+        letter-spacing: 0.05rem;
+    }
+}
+.list-inline {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    li {
+        list-style-type: none;
+        display: inline-block;
+    }
+}
+ol {
+    // margin: 0;
+    padding: 0;
+    > li {
+        list-style-type: cjk-ideographic;
+        margin-left: 50px;
+        > ol {
+            margin: 1rem 0rem 1rem 0rem;
+            > li {
+                list-style-type: decimal;
+                margin-left: 1.5rem;
+
+                > ol {
+                    > li {
+                        list-style-type: upper-alpha;
+                        &:after,
+                        &:before {
+                            content: "";
+                        }
+                        > ol {
+                            > li {
+                                list-style-type: lower-alpha;
+                                > ol {
+                                    > li {
+                                        list-style-type: lower-roman;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

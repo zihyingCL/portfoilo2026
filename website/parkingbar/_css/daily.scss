@@ -1,0 +1,228 @@
+$primary: #9b7e24;
+$primary-light: #fcf9f5;
+$primary-light2: #f0ede8;
+$text: #262626;
+$border: #ced4da;
+
+
+input[type="radio"] {
+    display: none;
+}
+
+.search-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    button {
+        margin-left: 1rem;
+        border: $primary;
+        color: white;
+        background-color: $primary;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+    }
+}
+
+.btn-row {
+    margin: 3rem auto;
+    label {
+        margin: 0.5rem;
+        width: auto;
+        height: auto;
+    }
+
+    span {
+        background-color: white;
+        border: 1px solid white;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        color: #9b7e24;
+        transition: 0.2s ease-in-out;
+    }
+
+    input {
+        &:checked + span {
+            background-color: #9b7e24;
+            border: 1px solid #9b7e24;
+            color: white;
+        }
+    }
+}
+
+
+.table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    color: $text;
+
+    thead {
+        tr{
+            th{
+                background-color: $primary;
+                color: white;
+                padding: 0.5rem;
+                letter-spacing: 1px;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            background-color: white;
+            &:nth-child(even) {
+                background-color: $primary-light;
+            }
+            td {
+                padding: 0.8rem 0.5rem;
+                color: $text;
+            }
+
+            &:hover {
+                td {
+                    background-color: $primary-light2;
+                }
+            }
+        }
+    }
+}
+
+
+input {
+    &:focus, &:focus-visible {
+        outline: 1px solid $primary;
+    }
+
+    &[type="text"],
+    &[type="number"] {
+        padding: 0.5rem 0.8rem;
+        color: $text;
+        border-radius: 4px;
+        border: 1px solid $border;
+        background: #fff;
+
+        &.date-picker {
+            width: 10rem;
+            padding: 0.8rem;
+            color: $text;
+            border-radius: 4px;
+            border: 1px solid $border;
+            display: block;
+            background-color: #fff;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16"><path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            transition:
+                border-color 0.15s ease-in-out,
+                box-shadow 0.15s ease-in-out;
+            appearance: none;
+        }
+    }
+
+}
+
+
+/*日期jq*/
+.dtp {
+    background: rgba(0, 0, 0, 0.7);
+    div.dtp-picker-month {
+        padding: 0px 0 15px !important;
+    }
+    div.dtp-time,
+    div.dtp-date {
+        background: $primary;
+        opacity: 0.85;
+        padding-bottom: 7px;
+        > div:last-child {
+            margin-top: 0.3rem !important;
+            i {
+                margin-top: 0.1rem;
+            }
+        }
+        .p10 > a {
+            color: #fff;
+        }
+    }
+    .year-picker-item:hover,
+    .year-picker-item.active {
+        color: $primary;
+        font-size: 1.2rem;
+    }
+    .year-picker-item {
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1rem;
+    }
+    div.dtp-actual-year {
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 0.3rem;
+    }
+    table.dtp-picker-days tr > th {
+        background: transparent;
+        border-bottom: 1px solid $border;
+    }
+    .dtp-content > .dtp-date-view > header.dtp-header,
+    table.dtp-picker-days tr > td > a.selected {
+        background: $primary;
+    }
+    div.dtp-picker {
+        padding-bottom: 0.2em;
+        background: $primary-light2;
+        // border-top: 1px solid $border;
+    }
+
+    .dtp-picker-month,
+    .dtp-buttons,
+    .table > :not(caption) > * > *,
+    table.dtp-picker-days tr > td > a,
+    .dtp-picker-time > a {
+        background: $primary-light2;
+        color: $text;
+    }
+
+    .btn-default {
+        padding: 0 !important;
+    }
+    &-close {
+        right: 0;
+        a {
+            padding: 10px;
+        }
+    }
+    .btn {
+        &-flat {
+            border-radius: 4px;
+            border-width: 1px;
+            border-style: solid;
+            font-size: 1rem;
+            letter-spacing: 0.11rem;
+            font-weight: 400;
+            padding: 0.3rem 1rem;
+        }
+    }
+    &-btn {
+        &-ok {
+            background: $primary;
+            color: white;
+            border-color: $primary;
+            &:hover {
+                background: $primary;
+                color: #fff;
+            }
+        }
+        &-cancel {
+            color: $primary;
+            border-color: $primary;
+            margin-right: 0.8rem;
+            // &:hover {
+            //     background-color: #ffffff29;
+            // }
+        }
+    }
+
+    > .dtp-content {
+        border-radius: 4px;
+        .dtp-header {
+            border-radius: 4px 4px 0px 0px;
+        }
+    }
+}

@@ -1,35 +1,69 @@
 [
   {
-    "id": "blog-2025",
+    "id": "2023visa",
     "category": "web",
-    "title": "寂靜閱讀 · 個人部落格",
-    "date": "2025-02",
+    "title": "Visa 卡友尊榮禮遇網站改版",
+    "date": "2023-10",
     "cover": "images/work-blog.jpg",
     "images": [
       "images/spring-01.jpg",
       "images/spring-02.jpg",
       "images/spring-03.jpg"
     ],
-    "intro": "簡約風格的內容平台，強調留白與字體層級。",
-    "description_long": "此專案初始需求是為了建立一個極簡的閱讀空間。在規劃上，我採用了非對稱排版，並透過 CSS Grid 實現響應式佈局...",
+    "intro": "原網站約五年前建立，因維護/資安/新合約等各種方面的考量而重新規劃流程與網站風格",
+    "description_long": "原網站被同事戲稱「Visa 迷宮」，因為在同一個網站中放置了多種信用卡的優惠，每種卡別的優惠內容、預約表單都不同，非常容易使用戶迷失在各種連來連去的頁面中，且造成 RD 串接時的麻煩（重複東西要串很多頁）。此次改版最主要目的是要升級 Bootstrap/jQuery 版本，同時調整流程讓用戶不要這麼容易迷路。",
     "tags": [
       "UI/UX",
       "HTML/CSS",
-      "RWD"
+      "RWD",
+      "Figma",
+      "JavaScript"
     ],
     "links": [
       {
-        "label": "查看線上範例",
-        "url": "https://example.com",
+        "label": "前往網站",
+        "url": "https://www.freeliving.com.tw/visa/",
         "icon": "fas fa-external-link-alt"
       }
     ],
     "isFeatured": true
   },
   {
-    "id": "brand-2024",
+    "id": "2023eticket",
     "category": "web",
-    "title": "選物品牌 · 形象官網",
+    "title": "電子票卡改版",
+    "date": "2023-05",
+    "cover": "images/work-select.jpg",
+    "images": [
+      "images/spring-01.jpg",
+      "images/spring-02.jpg",
+      "images/spring-03.jpg"
+    ],
+    "intro": "因服務範圍擴大＋舊版票卡跑版問題，因此進行全面改版。",
+    "description_long": "原票卡採用了 Javascript 語法讓卡片可以翻轉到背面看詳細資訊，但後續在 iOS 手機上嚴重跑版，加上上級有意增加其他服務的票卡發送給客戶，因此進行全服務的改版。以舊票卡為基礎，重新規劃 UI，新增更多服務功能等。",
+    "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "票卡介紹",
+        "url": "https://cdn.canlead.com.tw/smart_ticket/index.html",
+        "icon": "fas fa-code"
+      },
+      {
+        "label": "Figma Prototype",
+        "url": "",
+        "icon": "fas fa-figma"
+      }
+    ]
+  },
+  {
+    "id": "2023postesg",
+    "category": "web",
+    "title": "自綠生活 永續創新",
     "date": "2024-11",
     "cover": "images/work-select.jpg",
     "images": [
@@ -37,9 +71,41 @@
       "images/spring-02.jpg",
       "images/spring-03.jpg"
     ],
-    "intro": "RWD 切版，包含產品展示、動畫效果。",
-    "description_long": "品牌核心為「生活美學」，因此在視覺上大量使用了大地色調與柔和的轉場動畫...",
+    "intro": "RWD 切版，包含活動理念、活動辦法、行程預約。",
+    "description_long": "整體網頁採中華郵政的識別色綠色與企業象徵的白鴿作為設計主體，配合線下活動讓用戶可以直接使用手機預約行程。",
     "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "RWD",
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "#",
+        "icon": "fas fa-code"
+      }
+    ],
+    "isFeatured": true
+  },
+    {
+    "id": "2023hncbvip",
+    "category": "web",
+    "title": "自綠生活 永續創新",
+    "date": "2024-11",
+    "cover": "images/work-select.jpg",
+    "images": [
+      "images/spring-01.jpg",
+      "images/spring-02.jpg",
+      "images/spring-03.jpg"
+    ],
+    "intro": "RWD 切版，包含活動理念、活動辦法、行程預約。",
+    "description_long": "整體網頁採中華郵政的識別色綠色與企業象徵的白鴿作為設計主體，配合線下活動讓用戶可以直接使用手機預約行程。",
+    "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "RWD",
       "Figma",
       "JavaScript"
     ],
@@ -53,89 +119,25 @@
     "isFeatured": true
   },
   {
-    "id": "brand-2024",
+    "id": "2026midnight",
     "category": "web",
-    "title": "選物品牌 · 形象官網",
-    "date": "2024-11",
+    "title": "客製商品訂製網站",
+    "date": "2026-02",
     "cover": "images/work-select.jpg",
     "images": [
       "images/spring-01.jpg",
       "images/spring-02.jpg",
       "images/spring-03.jpg"
     ],
-    "intro": "RWD 切版，包含產品展示、動畫效果。",
-    "description_long": "品牌核心為「生活美學」，因此在視覺上大量使用了大地色調與柔和的轉場動畫...",
+    "intro": "使用 AI 協助生成產出網站。",
+    "description_long": "使用 AI 生成網站架構，無金流，搭配 Google Sheet App Script 作為資料庫，接收網頁訂單與庫存、選項管理。與台灣常見的購物平台不同之處在於：由於客戶的商品需要較為細節的選項與規格（三種或以上），且每個規格需要互相綁定選項規則，透過 AI 幫助處理邏輯部分＋人工測試調整，加速整個開發流程。",
     "tags": [
-      "Figma",
-      "JavaScript"
-    ],
-    "links": [
-      {
-        "label": "GitHub",
-        "url": "#",
-        "icon": "fas fa-code"
-      }
-    ],
-    "isFeatured": true
-  },
-  {
-    "id": "brand-2024",
-    "category": "web",
-    "title": "選物品牌 · 形象官網",
-    "date": "2024-11",
-    "cover": "images/work-select.jpg",
-    "images": [
-      "images/spring-01.jpg",
-      "images/spring-02.jpg",
-      "images/spring-03.jpg"
-    ],
-    "intro": "RWD 切版，包含產品展示、動畫效果。",
-    "description_long": "品牌核心為「生活美學」，因此在視覺上大量使用了大地色調與柔和的轉場動畫...",
-    "tags": [
-      "Figma",
-      "JavaScript"
-    ],
-    "links": [
-      {
-        "label": "GitHub",
-        "url": "#",
-        "icon": "fas fa-code"
-      }
-    ],
-    "isFeatured": true
-  },
-  {
-    "id": "spring-2024",
-    "category": "graphic",
-    "type": "平面 / 社群Banner",
-    "year": "2024",
-    "title": "春夏服飾系列視覺",
-    "desc": "為服裝品牌設計的一組社群貼文與廣告banner，柔和色調與排版。",
-    "links": [
-      {
-        "label": "詳情",
-        "url": "work-detail.html?id=spring-2024",
-        "icon": "fas fa-arrow-right"
-      }
-    ],
-    "isFeatured": true
-  },
-  {
-    "id": "brand-2024",
-    "category": "graphic",
-    "title": "選物品牌 · 形象官網",
-    "date": "2024-11",
-    "cover": "images/work-select.jpg",
-    "images": [
-      "images/spring-01.jpg",
-      "images/spring-02.jpg",
-      "images/spring-03.jpg"
-    ],
-    "intro": "RWD 切版，包含產品展示、動畫效果。",
-    "description_long": "品牌核心為「生活美學」，因此在視覺上大量使用了大地色調與柔和的轉場動畫...",
-    "tags": [
-      "Figma",
-      "JavaScript"
+      "ChatGPT",
+      "Gemini",
+      "DeepSeek",
+      "HTML/CSS",
+      "JavaScript",
+      "RWD"
     ],
     "links": [
       {
