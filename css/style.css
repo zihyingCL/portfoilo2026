@@ -47,7 +47,7 @@ h6 {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
 }
 
@@ -99,7 +99,7 @@ section {
   font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin: 60px 0;
   color: #2a2a2a;
   position: relative;
   display: inline-block;
@@ -136,14 +136,15 @@ section {
   transition: -webkit-transform var(--transition-base);
   transition: transform var(--transition-base);
   transition: transform var(--transition-base), -webkit-transform var(--transition-base);
+  text-decoration: none;
 }
 .btn-link:hover {
   color: #000;
   border-bottom-color: #000;
 }
 .btn-link:hover i {
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .btn-outline {
@@ -289,6 +290,11 @@ section {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+}
+.hero .count-number {
+  display: inline-block;
+  min-width: 2rem; /* 根據你的字體大小調整，確保數字 6 跟 50 的寬度一致 */
+  font-variant-numeric: tabular-nums; /* 讓數字變為等寬，非常適合跑數據動畫 */
 }
 .hero .stat-item {
   font-weight: 300;
@@ -716,16 +722,6 @@ footer {
   font-size: 0.85rem;
   color: #555;
 }
-.work-detail-page .detail-hero-img {
-  margin-bottom: 60px;
-}
-.work-detail-page .detail-hero-img img {
-  width: 100%;
-  height: auto;
-  max-height: 600px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .work-detail-page .detail-content-grid {
   display: grid;
   grid-template-columns: 1fr 300px;
@@ -787,9 +783,6 @@ footer {
     font-size: 2.2rem;
     letter-spacing: 2px;
   }
-  .work-detail-page .detail-hero-img.swiper {
-    padding-bottom: 75%;
-  }
   .work-detail-page .detail-content-grid {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -812,31 +805,56 @@ footer {
   .work-detail-page .large-title {
     font-size: 1.8rem;
   }
-  .work-detail-page .detail-hero-img.swiper {
-    padding-bottom: 100%;
-  }
 }
 /* 作品詳情頁 Swiper 樣式 */
 .work-detail-page .detail-hero-img.swiper {
   width: 100%;
-  height: 0;
-  padding-bottom: 56.25%; /* 16:9 比例，可依需求調整 */
+  height: 500px;
   margin-bottom: 40px;
   overflow: hidden;
-  border-radius: 0; /* 配合整體直角風格 */
+  border-radius: 0;
+}
+@media (max-width: 48rem) {
+  .work-detail-page .detail-hero-img.swiper {
+    height: 350px;
+  }
+}
+@media (max-width: 36rem) {
+  .work-detail-page .detail-hero-img.swiper {
+    height: 250px;
+  }
 }
 .work-detail-page .detail-hero-img.swiper .swiper-wrapper {
   height: 100%;
 }
 .work-detail-page .detail-hero-img.swiper .swiper-slide {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f5f5f5;
+}
+.work-detail-page .detail-hero-img.swiper .swiper-slide a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 .work-detail-page .detail-hero-img.swiper .swiper-slide img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover; /* 確保圖片填滿容器且不變形 */
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 .work-detail-page .detail-hero-img.swiper .swiper-pagination-bullet {
   background: #aaa;

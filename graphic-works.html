@@ -29,32 +29,17 @@
 
     <!-- 作品展示區塊 -->
     <section id="works" class="container">
-        <div class="portfolio-grid-full">
-            <!-- 平面作品 1 (banner 類型) -->
-            <div class="portfolio-item work-card">
-                <div class="card-img img-placeholder-graphic"></div>
-                <div class="card-content">
-                    <div class="card-category"><i class="fas fa-paint-brush"></i> 平面 / 社群Banner</div>
-                    <h3 class="card-title">春夏服飾系列視覺</h3>
-                    <p class="card-desc">為服裝品牌設計的一組社群貼文與廣告banner，柔和色調與排版。</p>
-                    <a href="#" class="btn-link">查看詳情 <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <!-- 平面作品 2 -->
-            <div class="portfolio-item work-card">
-                <div class="card-img img-placeholder-graphic"
-                    style="background-image: linear-gradient(45deg, #cfb9a5, #eadacb);"></div>
-                <div class="card-content">
-                    <div class="card-category"><i class="fas fa-calendar-alt"></i> 活動視覺</div>
-                    <h3 class="card-title">音樂節主視覺 & 延伸</h3>
-                    <p class="card-desc">海報、手環、網站橫幅設計，統一風格的視覺系統。</p>
-                    <a href="#" class="btn-link">查看詳情 <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
+        <div id="graphic-works-grid" class="portfolio-grid-full"></div>
     </section>
 
     <div id="footer-placeholder"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 載入 category 為 graphic 的作品
+            loadWorks({ targetId: 'graphic-works-grid', category: 'graphic' });
+        });
+    </script>
 
     <script src="js/main.js"></script>
 

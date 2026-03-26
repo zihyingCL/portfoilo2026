@@ -20,7 +20,7 @@ section {
   font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin: 60px 0;
   color: #2a2a2a;
   position: relative;
   display: inline-block;
@@ -50,6 +50,7 @@ section {
   i {
     font-size: 0.9rem;
     transition: transform var(--transition-base);
+    text-decoration: none;
   }
 
   &:hover {
@@ -57,7 +58,7 @@ section {
     border-bottom-color: #000;
 
     i {
-      transform: translateX(5px);
+      transform: translateY(-5px);
     }
   }
 }
@@ -190,6 +191,12 @@ section {
       flex-wrap: wrap;
     }
   }
+
+  .count-number {
+    display: inline-block;
+    min-width: 2rem; /* 根據你的字體大小調整，確保數字 6 跟 50 的寬度一致 */
+    font-variant-numeric: tabular-nums; /* 讓數字變為等寬，非常適合跑數據動畫 */
+}
 
   .stat-item {
     font-weight: 300;
@@ -575,16 +582,16 @@ footer {
     }
   }
 
-  .detail-hero-img {
-    margin-bottom: 60px;
+  // .detail-hero-img {
+  //   margin-bottom: 60px;
 
-    img {
-      width: 100%;
-      height: auto;
-      max-height: 600px;
-      object-fit: cover;
-    }
-  }
+  //   img {
+  //     width: 100%;
+  //     height: auto;
+  //     max-height: 600px;
+  //     object-fit: cover;
+  //   }
+  // }
 
   .detail-content-grid {
     display: grid;
@@ -654,9 +661,9 @@ footer {
       letter-spacing: 2px;
     }
 
-    .detail-hero-img.swiper {
-      padding-bottom: 75%; // 手機上可改為較高的比例 (4:3)
-    }
+    // .detail-hero-img.swiper {
+    //   padding-bottom: 75%; // 手機上可改為較高的比例 (4:3)
+    // }
 
     .detail-content-grid {
       grid-template-columns: 1fr; // 改為單欄
@@ -683,8 +690,8 @@ footer {
       font-size: 1.8rem;
     }
 
-    .detail-hero-img.swiper {
-      padding-bottom: 100%; // 1:1 方形
-    }
+    // .detail-hero-img.swiper {
+    //   padding-bottom: 100%; // 1:1 方形
+    // }
   }
 }
