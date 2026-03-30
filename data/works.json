@@ -4,10 +4,10 @@
     "category": "web",
     "title": "Visa 卡友尊榮禮遇網站改版",
     "date": "2023-10",
-    "cover": "images/work-blog.jpg",
+    "cover": "website/visa/index.png",
     "images": [
-      "images/spring-01.jpg",
-      "images/spring-02.jpg",
+      "website/visa/index.png",
+      "website/visa/visa_old.png",
       "images/spring-03.jpg"
     ],
     "intro": "原網站約五年前建立，因維護、資安、新年度合約等各種方面的考量而重新規劃流程與網站風格",
@@ -99,8 +99,8 @@
       "images/spring-02.jpg",
       "images/spring-03.jpg"
     ],
-    "intro": "RWD 切版，包含活動理念、活動辦法、行程預約。",
-    "description_long": "整體網頁採中華郵政的識別色綠色與企業象徵的白鴿作為設計主體，配合線下活動讓用戶可以直接使用手機預約行程。",
+    "intro": "機場周邊停車場，介紹首頁＋預約頁面。",
+    "description_long": "目標客群為銀行高端卡友，整體採高級尊榮質感及形象。",
     "tags": [
       "UI/UX",
       "HTML/CSS",
@@ -110,8 +110,8 @@
     ],
     "links": [
       {
-        "label": "GitHub",
-        "url": "#",
+        "label": "DEMO(原站已下架)",
+        "url": "/website/parkingbar/index.html",
         "icon": "fas fa-code"
       }
     ],
