@@ -51,6 +51,11 @@ async function loadWorks(filterConfig = {}) {
     if (filterConfig.onlyFeatured) {
       filteredWorks = filteredWorks.filter(item => item.isFeatured === true);
     }
+    
+    // 這裡使用 b - a 是為了「由新到舊」排序（降冪）
+    filteredWorks.sort((a, b) => {
+      return new Date(b.date) - new Date(a.date);
+    });
 
     renderWorks(filteredWorks, filterConfig.targetId);
   } catch (error) {

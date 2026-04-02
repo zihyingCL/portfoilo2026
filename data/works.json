@@ -7,8 +7,12 @@
     "cover": "website/visa/index.png",
     "images": [
       "website/visa/index.png",
-      "website/visa/visa_old.png",
-      "images/spring-03.jpg"
+      "website/visa/visa_old.jpg",
+      "website/visa/card_index.png",
+      "website/visa/servlist.png",
+      "website/visa/prodlist.png",
+      "website/visa/page.png",
+      "website/visa/orderform.png"
     ],
     "intro": "原網站約五年前建立，因維護、資安、新年度合約等各種方面的考量而重新規劃流程與網站風格",
     "description_long": "原網站被同事戲稱「Visa 迷宮」，因為在同一個網站中放置了多種信用卡的優惠，每種卡別的優惠內容、預約表單都不同，非常容易使用戶迷失在各種連來連去的頁面中，且造成 RD 串接時的麻煩（重複東西要串很多頁）。此次改版最主要目的是要升級 Bootstrap/jQuery 版本，同時調整流程讓用戶不要這麼容易迷路。",
@@ -51,11 +55,6 @@
         "label": "票卡介紹",
         "url": "https://cdn.canlead.com.tw/smart_ticket/index.html",
         "icon": "fas fa-external-link-alt"
-      },
-      {
-        "label": "Figma Prototype",
-        "url": "https://www.figma.com/proto/mx5kZQDzd8i023L6RJY0hS/Untitled?node-id=4-471&t=3IWHuiAIptb7f5Pq-0&scaling=min-zoom&content-scaling=fixed&page-id=4%3A469&starting-point-node-id=4%3A471&show-proto-sidebar=1",
-        "icon": "fa-brands fa-figma"
       }
     ]
   },
@@ -64,11 +63,13 @@
     "category": "web",
     "title": "自綠生活 永續創新",
     "date": "2024-11",
-    "cover": "images/work-select.jpg",
+    "cover": "website/postesg/export/index.png",
     "images": [
-      "images/spring-01.jpg",
-      "images/spring-02.jpg",
-      "images/spring-03.jpg"
+      "website/postesg/export/index.png",
+      "website/postesg/export/02product-list2.jpg",
+      "website/postesg/export/03product-info2.jpg",
+      "website/postesg/export/06order_check.jpg",
+      "website/postesg/export/08order_login.jpg"
     ],
     "intro": "RWD 切版線上預約活動頁面，包含活動理念、活動辦法、行程預約。",
     "description_long": "整體網頁採中華郵政的識別色綠色與企業象徵的白鴿作為設計主體，配合線下活動讓用戶可以直接使用手機預約行程。",
@@ -82,7 +83,7 @@
     "links": [
       {
         "label": "DEMO(原站已下架)",
-        "url": "#",
+        "url": "/website/postesg/index.html",
         "icon": "fas fa-code"
       }
     ],
@@ -93,11 +94,14 @@
     "category": "web",
     "title": "機場 VIP 停車場",
     "date": "2024-06",
-    "cover": "images/work-select.jpg",
+    "cover": "website/parkingbar/export/index.png",
     "images": [
-      "images/spring-01.jpg",
-      "images/spring-02.jpg",
-      "images/spring-03.jpg"
+      "website/parkingbar/export/index.png",
+      "website/parkingbar/export/tc.png",
+      "website/parkingbar/export/form.png",
+      "website/parkingbar/export/formcheck.png",
+      "website/parkingbar/export/order.png",
+      "website/parkingbar/export/orderlist.png"
     ],
     "intro": "機場周邊停車場，介紹首頁＋預約頁面。",
     "description_long": "目標客群為銀行高端卡友，整體採高級尊榮質感及形象。",
@@ -148,10 +152,10 @@
     "isFeatured": true
   },
    {
-    "id": "2024fashion",
+    "id": "ARSevent",
     "category": "graphic",
-    "title": "春夏服飾系列視覺",
-    "date": "2024-06",
+    "title": "Apple Reward Store 系列行銷",
+    "date": "2023-2026",
     "cover": "images/graphic-01.jpg",
     "images": [
       "images/graphic-01.jpg",
@@ -161,16 +165,11 @@
     "description_long": "此系列包含 Instagram 貼文、限時動態模板、官網首頁 Banner，統一視覺風格以傳遞品牌輕盈感。",
     "tags": ["平面設計", "Photoshop", "Illustrator", "社群素材"],
     "links": [
-      {
-        "label": "查看設計稿",
-        "url": "#",
-        "icon": "fas fa-image"
-      }
     ],
     "isFeatured": true
   },
   {
-    "id": "2024music",
+    "id": "SNSevent",
     "category": "graphic",
     "title": "音樂節主視覺 & 延伸",
     "date": "2023-08",
@@ -183,11 +182,7 @@
     "description_long": "從主視覺發想到周邊應用，包含活動官網、門票、手環、帆布條等，確保品牌識別一致性。",
     "tags": ["活動視覺", "Illustrator", "Photoshop", "品牌識別"],
     "links": [
-      {
-        "label": "Behance",
-        "url": "#",
-        "icon": "fab fa-behance"
-      }
+
     ],
     "isFeatured": true
   }
