@@ -122,34 +122,62 @@
     "isFeatured": true
   },
   {
-    "id": "2026midnight",
+    "id": "2024golf",
     "category": "web",
-    "title": "客製商品訂製網站",
-    "date": "2026-02",
-    "cover": "images/work-select.jpg",
+    "title": "高爾夫球預約網站",
+    "date": "2024-2025",
+    "cover": "website/golf/cathay.png",
     "images": [
-      "images/spring-01.jpg",
-      "images/spring-02.jpg",
-      "images/spring-03.jpg"
+      "website/golf/cathay.png",
+      "website/golf/ctbc.png",
+      "website/golf/taishin.png",
+      "website/golf/amex.png"
     ],
-    "intro": "使用 AI 協助生成產出網站。",
-    "description_long": "使用 AI 生成網站架構，無金流，搭配 Google Sheet App Script 作為資料庫，接收網頁訂單與庫存、選項管理。與台灣常見的購物平台不同之處在於：由於客戶的商品需要較為細節的選項與規格（三種或以上），且每個規格需要互相綁定選項規則，透過 AI 幫助處理邏輯部分＋人工測試調整，加速整個開發流程。",
+    "intro": "根據銀行優惠方式規劃預約流程及網站，讓用戶直接在線上使用卡友優惠預訂高爾夫球場。",
+    "description_long": "根據銀行優惠方式規劃預約流程及網站，讓用戶直接在線上使用卡友優惠預訂高爾夫球場。",
     "tags": [
-      "ChatGPT",
-      "Gemini",
-      "DeepSeek",
+      "UI/UX",
       "HTML/CSS",
-      "JavaScript",
-      "RWD"
+      "RWD",
+      "Figma",
+      "JavaScript"
     ],
     "links": [
       {
-        "label": "GitHub",
-        "url": "#",
-        "icon": "fas fa-code"
+        "label": "國泰 VIP 高球",
+        "url": "https://vip.canlead.com.tw/cathaybk/golf/",
+        "icon": "fas fa-external-link-alt"
       }
+    ]
+  },
+  {
+    "id": "2024sogo",
+    "category": "web",
+    "title": "一頁式權益優惠網站",
+    "date": "2024-2025",
+    "cover": "website/golf/cathay.png",
+    "images": [
+      "website/golf/cathay.png",
+      "website/golf/ctbc.png",
+      "website/golf/taishin.png",
+      "website/golf/amex.png"
     ],
-    "isFeatured": true
+    "intro": "",
+    "description_long": "",
+    "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "RWD",
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "活動網站",
+        "url": "https://www.freeliving.com.tw/event/ctbcbank/sogo/",
+        "icon": "fas fa-external-link-alt"
+      }
+    ]
   },
    {
     "id": "ARSevent",
@@ -161,9 +189,9 @@
       "images/graphic-01.jpg",
       "images/graphic-02.jpg"
     ],
-    "intro": "為服裝品牌設計的社群貼文與廣告 Banner，柔和色調與簡約排版。",
-    "description_long": "此系列包含 Instagram 貼文、限時動態模板、官網首頁 Banner，統一視覺風格以傳遞品牌輕盈感。",
-    "tags": ["平面設計", "Photoshop", "Illustrator", "社群素材"],
+    "intro": "Apple 新品之行銷設計，在不修改商品照片的大前提下製作各式各樣的行銷素材。",
+    "description_long": "Apple 新品之行銷設計，在不修改商品照片的大前提下製作各式各樣的行銷素材。",
+    "tags": ["活動視覺", "Photoshop", "Illustrator", "社群素材", "Figma"],
     "links": [
     ],
     "isFeatured": true
@@ -171,18 +199,34 @@
   {
     "id": "SNSevent",
     "category": "graphic",
-    "title": "音樂節主視覺 & 延伸",
-    "date": "2023-08",
+    "title": "社群平台行銷圖",
+    "date": "2020-2026",
     "cover": "images/music-festival.jpg",
     "images": [
       "images/music-01.jpg",
       "images/music-02.jpg"
     ],
-    "intro": "海報、手環、網站橫幅設計，統一風格的視覺系統。",
-    "description_long": "從主視覺發想到周邊應用，包含活動官網、門票、手環、帆布條等，確保品牌識別一致性。",
-    "tags": ["活動視覺", "Illustrator", "Photoshop", "品牌識別"],
+    "intro": "主要放於社群平台的行銷圖。",
+    "description_long": "主要放於社群平台的行銷圖，視覺比例為 1:1 方形。",
+    "tags": ["活動視覺", "Illustrator", "Photoshop", "社群素材", "Figma"],
     "links": [
-
+    ],
+    "isFeatured": true
+  },
+  {
+    "id": "Festivalevent",
+    "category": "graphic",
+    "title": "季節性行銷活動",
+    "date": "2023-2026",
+    "cover": "images/music-festival.jpg",
+    "images": [
+      "images/music-01.jpg",
+      "images/music-02.jpg"
+    ],
+    "intro": "根據行銷部門提供的商品與主題，規劃活動頁與主視覺。",
+    "description_long": "根據行銷部門提供的商品與主題，規劃活動頁與主視覺，主要呈現於各個點數/紅利兌換平台。",
+    "tags": ["活動視覺", "Illustrator", "Photoshop", "社群素材", "Figma"],
+    "links": [
     ],
     "isFeatured": true
   }

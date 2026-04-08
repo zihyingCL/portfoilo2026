@@ -411,6 +411,7 @@ section {
   color: #4a4a4a;
   margin-bottom: 25px;
   font-weight: 300;
+  min-height: 3.5rem;
 }
 .work-card .blog-links {
   display: -webkit-box;

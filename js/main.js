@@ -54,7 +54,8 @@ async function loadWorks(filterConfig = {}) {
     
     // 這裡使用 b - a 是為了「由新到舊」排序（降冪）
     filteredWorks.sort((a, b) => {
-      return new Date(b.date) - new Date(a.date);
+      // return new Date(b.date) - new Date(a.date);
+      return b.date.localeCompare(a.date);
     });
 
     renderWorks(filteredWorks, filterConfig.targetId);
