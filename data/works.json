@@ -151,16 +151,44 @@
     ]
   },
   {
+    "id": "2025edti",
+    "category": "web",
+    "title": "手機回收網",
+    "date": "202507",
+    "cover": "website/edti/index.jpg",
+    "images": [
+      "website/edti/index.jpg",
+      "website/edti/sheet2.jpg",
+      "website/edti/sheet.jpg",
+      "website/edti/ewcdiscount.jpg"
+    ],
+    "intro": "串聯 Google Sheet 做為資料來源同步報價資訊於網頁中。",
+    "description_long": "為了因應手機回收及各平台行銷需求，判斷來源網址後會呈現不同畫面（與後端搭配，使用 cookie 來做判斷要顯示的內容），串聯 Google Sheet 做為資料來源同步報價資訊於網頁中。",
+    "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "RWD",
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "活動網站（Apple 專版）",
+        "url": "https://www.bestgifts.tw/edti/",
+        "icon": "fas fa-external-link-alt"
+      }
+    ]
+  },
+  {
     "id": "2024sogo",
     "category": "web",
     "title": "一頁式權益優惠網站",
     "date": "2024-2025",
-    "cover": "website/golf/cathay.png",
+    "cover": "website/sogohkp/1.jpg",
     "images": [
-      "website/golf/cathay.png",
-      "website/golf/ctbc.png",
-      "website/golf/taishin.png",
-      "website/golf/amex.png"
+      "website/sogohkp/1.jpg",
+      "website/sogohkp/2.jpg",
+      "website/sogohkp/3.jpg"
     ],
     "intro": "",
     "description_long": "",

@@ -20,21 +20,38 @@
     <div id="navbar-placeholder"></div>
 
     <!-- 首頁 HERO 區塊 (作品與個人經歷總覽) -->
-    <section id="home" class="hero fade-in">
+    <section id="home" class="hero hero-parallax">
+        <!-- 視差背景層 -->
+        <div class="parallax-bg" id="parallaxBg">
+            <div class="parallax-shape shape-1"></div>
+            <div class="parallax-shape shape-2"></div>
+            <div class="parallax-shape shape-3"></div>
+            <div class="parallax-shape shape-4"></div>
+            <div class="parallax-shape shape-5"></div>
+        </div>
+        <!-- 原有光暈覆蓋層 -->
         <div class="hero-overlay"></div>
+
         <div class="hero-content">
             <div class="hero-subtitle">個人作品展示</div>
             <p class="hero-desc">UI/UX 設計 ＆ 前端切版 ＆ 平面行銷設計</p>
             <div class="hero-stats">
-                <div class="stat-item"><span class="stat-number"><span class="count-number" data-target="6">0</span>年</span><span
-                        class="stat-label">相關工作經驗</span></div>
-                <div class="stat-item"><span class="stat-number"><span class="count-number" data-target="30">0</span>+</span><span
-                        class="stat-label">網頁/專案作品</span></div>
-                <div class="stat-item"><span class="stat-number"><span class="count-number" data-target="50">0</span>+</span><span
-                        class="stat-label">靜態設計</span></div>
+                <div class="stat-item">
+                    <span class="stat-number"><span class="count-number" data-target="6">0</span>年</span>
+                    <span class="stat-label">相關工作經驗</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number"><span class="count-number" data-target="30">0</span>+</span>
+                    <span class="stat-label">網頁/專案作品</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number"><span class="count-number" data-target="50">0</span>+</span>
+                    <span class="stat-label">靜態設計</span>
+                </div>
             </div>
         </div>
     </section>
+
 
     <!-- 作品集總覽 (首頁預覽) -->
     <section id="works" class="container">
@@ -60,7 +77,7 @@
                 <h3>Graphic Design</h3>
                 <p>品牌視覺、社群素材與活動視覺</p>
             </div>
-            <div id="graphic-grid" class="portfolio-grid-full"></div>
+            <div id="graphic-grid" class="portfolio-grid"></div>
             <div class="category-cta">
                 <a href="graphic-works.html" class="btn-outline">查看更多平面作品 <i class="fas fa-arrow-right"></i></a>
             </div>
@@ -166,39 +183,140 @@
     </script>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const stats = document.querySelectorAll('.count-number[data-target]');
-            const duration = 2000; // 動化持續時間（毫秒）
-
-            const countUp = (el) => {
-                const target = +el.getAttribute('data-target');
-                const increment = target / (duration / 16); // 以 60fps 計算每幀增加多少
+        (function () {
+            function animateNumber(element, target, duration = 1400) {
+                let start = 0;
+                const stepTime = 16;
+                const steps = Math.ceil(duration / stepTime);
+                const increment = target / steps;
                 let current = 0;
-
-                const updateCount = () => {
+                let stepCount = 0;
+                if (target === 0) {
+                    element.innerText = "0";
+                    return;
+                }
+                const timer = setInterval(() => {
+                    stepCount++;
                     current += increment;
-                    if (current < target) {
-                        el.innerText = Math.floor(current);
-                        requestAnimationFrame(updateCount);
+                    if (stepCount >= steps) {
+                        element.innerText = target;
+                        clearInterval(timer);
                     } else {
-                        el.innerText = target; // 確保最後數字精準
+                        element.innerText = Math.floor(current);
                     }
-                };
-                updateCount();
-            };
+                }, stepTime);
+            }
 
-            // 使用 Intersection Observer 偵測滾動
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        countUp(entry.target);
-                        observer.unobserve(entry.target); // 只跑一次動畫
-                    }
+            function startCounters(container) {
+                const counters = container.querySelectorAll('.count-number');
+                counters.forEach(counter => {
+                    if (counter.getAttribute('data-animated') === 'true') return;
+                    const target = parseInt(counter.getAttribute('data-target'), 10);
+                    if (isNaN(target)) return;
+                    counter.innerText = "0";
+                    animateNumber(counter, target, 1400);
+                    counter.setAttribute('data-animated', 'true');
                 });
-            }, { threshold: 0.5 }); // 當區塊出現一半時觸發
+            }
 
-            stats.forEach(stat => observer.observe(stat));
-        });
+            const hero = document.querySelector('#home');
+            if (hero) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) startCounters(entry.target);
+                    });
+                }, { threshold: 0.3 });
+                observer.observe(hero);
+                if (hero.getBoundingClientRect().top < window.innerHeight - 100) startCounters(hero);
+            }
+        })();
+    </script>
+
+    <script>
+        // 方案 C：滑鼠視差效果（使用 requestAnimationFrame 節流）
+        (function () {
+            const parallaxContainer = document.getElementById('parallaxBg');
+            if (!parallaxContainer) return;
+
+            const shapes = parallaxContainer.querySelectorAll('.parallax-shape');
+            let mouseX = 0, mouseY = 0;
+            let currentX = 0, currentY = 0;
+
+            // 更新滑鼠座標
+            document.addEventListener('mousemove', (e) => {
+                // 計算滑鼠位置相對於螢幕中心的比例 (-1 ~ 1)
+                mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+                mouseY = (e.clientY / window.innerHeight) * 2 - 1;
+            });
+
+            // 動畫循環：平滑追蹤滑鼠位置
+            function animateParallax() {
+                // 緩動效果，讓移動更平滑
+                currentX += (mouseX - currentX) * 0.1;
+                currentY += (mouseY - currentY) * 0.1;
+
+                shapes.forEach((shape, idx) => {
+                    // 每個形狀的移動幅度不同，層次感更豐富
+                    const factor = (idx + 1) * 8;  // 8, 16, 24, 32, 40
+                    const offsetX = currentX * factor;
+                    const offsetY = currentY * factor;
+                    shape.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+                });
+
+                requestAnimationFrame(animateParallax);
+            }
+
+            animateParallax();
+        })();
+
+        // 數字動畫（保持原有功能，滾動到 Hero 時觸發）
+        (function () {
+            function animateNumber(element, target, duration = 1400) {
+                let start = 0;
+                const stepTime = 16;
+                const steps = Math.ceil(duration / stepTime);
+                const increment = target / steps;
+                let current = 0;
+                let stepCount = 0;
+                if (target === 0) {
+                    element.innerText = "0";
+                    return;
+                }
+                const timer = setInterval(() => {
+                    stepCount++;
+                    current += increment;
+                    if (stepCount >= steps) {
+                        element.innerText = target;
+                        clearInterval(timer);
+                    } else {
+                        element.innerText = Math.floor(current);
+                    }
+                }, stepTime);
+            }
+
+            function startCounters(container) {
+                const counters = container.querySelectorAll('.count-number');
+                counters.forEach(counter => {
+                    if (counter.getAttribute('data-animated') === 'true') return;
+                    const target = parseInt(counter.getAttribute('data-target'), 10);
+                    if (isNaN(target)) return;
+                    counter.innerText = "0";
+                    animateNumber(counter, target, 1400);
+                    counter.setAttribute('data-animated', 'true');
+                });
+            }
+
+            const hero = document.querySelector('.hero-parallax');
+            if (hero) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) startCounters(entry.target);
+                    });
+                }, { threshold: 0.3 });
+                observer.observe(hero);
+                if (hero.getBoundingClientRect().top < window.innerHeight - 100) startCounters(hero);
+            }
+        })();
     </script>
 
 </body>

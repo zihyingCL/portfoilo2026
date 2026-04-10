@@ -102,3 +102,38 @@ img {
   opacity: 1;
   pointer-events: all;
 }
+
+/* ===== 自訂滑鼠游標 ===== */
+body {
+  cursor: none; // 隱藏預設游標
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background 0.2s;
+  mix-blend-mode: difference;
+  backdrop-filter: invert(1);
+}
+
+// 懸停時放大效果
+.custom-cursor.hover {
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: invert(0);
+  mix-blend-mode: normal;
+}
+
+// 讓所有可點擊元素觸發 hover 效果
+a, button, .stat-item, .filter-tab, .btn-link, .btn-outline, .work-card {
+  cursor: none;
+}

@@ -159,3 +159,62 @@ function renderWorks(data, targetId) {
     }, 400); // 0.4s
   });
 })();
+
+
+// ===== 自訂游標跟隨 + 互動反饋（靈敏度降低、全站適用）=====
+(function() {
+    // 建立游標元素（若不存在才建立）
+    if (!document.querySelector('.custom-cursor')) {
+        const cursor = document.createElement('div');
+        cursor.className = 'custom-cursor';
+        document.body.appendChild(cursor);
+    }
+    const cursor = document.querySelector('.custom-cursor');
+    
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    
+    // 更新滑鼠座標
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+    
+    // 動畫循環 - 使用較低的緩動係數 (0.08) 讓游標更穩定
+    function animateCursor() {
+        cursorX += (mouseX - cursorX) * 0.1;
+        cursorY += (mouseY - cursorY) * 0.1;
+        cursor.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+    
+    // 為所有可點擊元素添加懸停效果 (使用事件委託 + 動態監聽)
+    function addHoverListeners() {
+        const hoverElements = document.querySelectorAll('a, button, .stat-item, .filter-tab, .btn-link, .btn-outline, .work-card, .hero-stats .stat-item');
+        hoverElements.forEach(el => {
+            // 避免重複綁定
+            if (el.hasAttribute('data-cursor-listener')) return;
+            el.setAttribute('data-cursor-listener', 'true');
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+    }
+    
+    // 初始綁定
+    addHoverListeners();
+    
+    // 監聽 DOM 變化，自動綁定新加入的可互動元素（適用於動態加載內容）
+    const observer = new MutationObserver(() => {
+        addHoverListeners();
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+    
+    // 當滑鼠離開視窗時隱藏游標（可選）
+    document.addEventListener('mouseleave', () => {
+        cursor.style.opacity = '0';
+    });
+    document.addEventListener('mouseenter', () => {
+        cursor.style.opacity = '1';
+    });
+})();
