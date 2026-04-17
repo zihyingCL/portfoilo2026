@@ -32,6 +32,35 @@
     ],
     "isFeatured": true
   },
+    {
+    "id": "2024wifi",
+    "category": "web",
+    "title": "漫遊吧官網",
+    "date": "2024-02",
+    "cover": "website/roambingbar/export/index.jpg",
+    "images": [
+      "website/roambingbar/index.jpg",
+      "website/roambingbar/intro.jpg",
+      "website/roambingbar/step.png",
+      "website/roambingbar/wifi.png"
+    ],
+    "intro": "",
+    "description_long": "",
+    "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "RWD",
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "DEMO(原站服務已轉移)",
+        "url": "/website/roambingbar/index.html",
+        "icon": "fas fa-code"
+      }
+    ]
+  },
   {
     "id": "2023eticket",
     "category": "web",
@@ -86,8 +115,7 @@
         "url": "/website/postesg/index.html",
         "icon": "fas fa-code"
       }
-    ],
-    "isFeatured": true
+    ]
   },
   {
     "id": "2024parkingbar",
@@ -154,7 +182,7 @@
     "id": "2025edti",
     "category": "web",
     "title": "手機回收網",
-    "date": "202507",
+    "date": "2025-07",
     "cover": "website/edti/index.jpg",
     "images": [
       "website/edti/index.jpg",
@@ -177,7 +205,8 @@
         "url": "https://www.bestgifts.tw/edti/",
         "icon": "fas fa-external-link-alt"
       }
-    ]
+    ],
+    "isFeatured": true
   },
   {
     "id": "2024sogo",
@@ -207,18 +236,133 @@
       }
     ]
   },
+  {
+    "id": "2025ewc",
+    "category": "web",
+    "title": "點數兌換平台",
+    "date": "2025-08",
+    "cover": "website/ewc/index.png",
+    "images": [
+      "website/ewc/index.png",
+      "website/ewc/catogory.png",
+      "website/ewc/brand.jpg",
+      "website/ewc/success.jpg",
+      "website/ewc/hotelOversea.jpg",
+      "website/ewc/point.png",
+      "website/ewc/orderList.jpg"
+    ],
+    "intro": "",
+    "description_long": "",
+    "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "RWD",
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "ABBA 合作平台",
+        "url": "https://vip.canlead.com.tw/abba/reward/",
+        "icon": "fas fa-external-link-alt"
+      }
+    ]
+  },
+  {
+    "id": "2023right",
+    "category": "web",
+    "title": "權益兌換平台",
+    "date": "2023-2025",
+    "cover": "img/index.jpg",
+    "images": [
+      "img/index.jpg",
+      "img/index2.jpg",
+      "img/index3.jpg"
+    ],
+    "intro": "",
+    "description_long": "根據合約調整提供的權益服務內容，目前公司的服務都有固定的預約欄位與模板（此為公司專案的主力），因此一般是設計不同的登入、首頁及特殊注意事項，後續預約的流程與畫面基本上各網站都是相同的。",
+    "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "RWD",
+      "Figma",
+      "JavaScript"
+    ]
+  },
+  {
+    "id": "2025cathaybd",
+    "category": "web",
+    "title": "會員生日禮",
+    "date": "2025-08",
+    "cover": "website/cathaybd/index.png",
+    "images": [
+      "website/cathaybd/index.png",
+      "website/cathaybd/list.png",
+      "website/cathaybd/list2.png",
+      "website/cathaybd/cake.png",
+      "website/cathaybd/page.png",
+      "website/cathaybd/edm.jpg"
+    ],
+    "intro": "",
+    "description_long": "",
+    "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "RWD",
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "活動網站",
+        "url": "https://vip.canlead.com.tw/CATHAYBK/BIRTHDAY/",
+        "icon": "fas fa-external-link-alt"
+      }
+    ]
+  },
+  {
+    "id": "2024cathaytk",
+    "category": "web",
+    "title": "演唱會票券平台",
+    "date": "2024-10",
+    "cover": "website/cathaytk/index.jpg",
+    "images": [
+      "website/cathaytk/login.jpg",
+      "website/cathaytk/index.jpg",
+      "website/cathaytk/pr_Order_Select.jpg",
+      "website/cathaytk/pr_Order_Form.jpg",
+      "website/cathaytk/pr_Order_Form-1.jpg",
+      "website/cathaytk/order_List.jpg"
+    ],
+    "intro": "",
+    "description_long": "",
+    "tags": [
+      "UI/UX",
+      "HTML/CSS",
+      "RWD",
+      "Figma",
+      "JavaScript"
+    ],
+    "links": [
+      {
+        "label": "無在售票券",
+        "url": "https://vip.canlead.com.tw/cathaybk/ticket/TSAICHIN2025/",
+        "icon": "fas fa-external-link-alt"
+      }
+    ]
+  },
    {
     "id": "ARSevent",
     "category": "graphic",
-    "title": "Apple Reward Store 系列行銷",
+    "title": "活動行銷",
     "date": "2023-2026",
     "cover": "images/graphic-01.jpg",
     "images": [
       "images/graphic-01.jpg",
       "images/graphic-02.jpg"
     ],
-    "intro": "Apple 新品之行銷設計，在不修改商品照片的大前提下製作各式各樣的行銷素材。",
-    "description_long": "Apple 新品之行銷設計，在不修改商品照片的大前提下製作各式各樣的行銷素材。",
+    "intro": "季節性活動行銷設計，包含但不限於活動網頁、Banner、EDM……等。",
+    "description_long": "季節性活動行銷設計，包含但不限於活動網頁、Banner、EDM……等。",
     "tags": ["活動視覺", "Photoshop", "Illustrator", "社群素材", "Figma"],
     "links": [
     ],
@@ -236,16 +380,62 @@
     ],
     "intro": "主要放於社群平台的行銷圖。",
     "description_long": "主要放於社群平台的行銷圖，視覺比例為 1:1 方形。",
-    "tags": ["活動視覺", "Illustrator", "Photoshop", "社群素材", "Figma"],
+    "tags": ["Illustrator", "Photoshop", "社群素材", "Figma"],
     "links": [
     ],
     "isFeatured": true
   },
   {
-    "id": "Festivalevent",
+    "id": "bnevent",
     "category": "graphic",
-    "title": "季節性行銷活動",
-    "date": "2023-2026",
+    "title": "Banner 行銷圖",
+    "date": "2020-2026",
+    "cover": "img/banner/1.jpg",
+    "images": [
+      "img/banner/1.jpg",
+      "img/banner/2.jpg",
+      "img/banner/3.jpg",
+      "img/banner/4.jpg",
+      "img/banner/5.jpg",
+      "img/banner/6.jpg",
+      "img/banner/7.jpg",
+      "img/banner/8.jpg",
+      "img/banner/9.jpg",
+      "img/banner/10.jpg",
+      "img/banner/11.jpg",
+      "img/banner/12.jpg",
+      "img/banner/13.jpg",
+      "img/banner/14.jpg",
+      "img/banner/15.jpg"
+    ],
+    "intro": "平台網站輪播用行銷 Banner 圖片",
+    "description_long": "平台網站輪播用行銷 Banner 圖片",
+    "tags": ["商品推廣", "Illustrator", "Photoshop", "活動素材", "Figma"],
+    "links": [
+    ],
+    "isFeatured": true
+  },
+  {
+    "id": "aso",
+    "category": "graphic",
+    "title": "ASO",
+    "date": "2019",
+    "cover": "img/aso.jpg",
+    "images": [
+      "img/aso.jpg",
+      "images/music-02.jpg"
+    ],
+    "intro": "根據行銷部門提供的商品與主題，規劃活動頁與主視覺。",
+    "description_long": "根據行銷部門提供的商品與主題，規劃活動頁與主視覺，主要呈現於各個點數/紅利兌換平台。",
+    "tags": ["活動視覺", "Illustrator", "Photoshop", "社群素材", "Figma"],
+    "links": [
+    ]
+  },
+  {
+    "id": "othergraphics",
+    "category": "graphic",
+    "title": "其他設計內容",
+    "date": "2020-2026",
     "cover": "images/music-festival.jpg",
     "images": [
       "images/music-01.jpg",
@@ -255,7 +445,6 @@
     "description_long": "根據行銷部門提供的商品與主題，規劃活動頁與主視覺，主要呈現於各個點數/紅利兌換平台。",
     "tags": ["活動視覺", "Illustrator", "Photoshop", "社群素材", "Figma"],
     "links": [
-    ],
-    "isFeatured": true
+    ]
   }
 ]

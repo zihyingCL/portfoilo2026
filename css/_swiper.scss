@@ -70,3 +70,72 @@
     display: none;
   }
 }
+
+
+.custom-slideshow {
+    position: relative;
+    width: 100%;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slides-window {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides-wrapper {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.custom-slide {
+    min-width: 100%;
+    flex: 0 0 100%;
+}
+
+.custom-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: zoom-in;
+}
+
+/* 按鈕樣式 */
+.slide-prev, .slide-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.slide-prev:hover, .slide-next:hover { background: #fff; }
+.slide-prev { left: 1rem; }
+.slide-next { right: 1rem; }
+
+/* 分頁點樣式 */
+.slides-pagination {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active { background: #333; }

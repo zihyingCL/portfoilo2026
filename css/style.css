@@ -78,40 +78,6 @@ img {
 }
 
 /* ===== 自訂滑鼠游標 ===== */
-body {
-  cursor: none;
-}
-
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: width 0.2s, height 0.2s, background 0.2s;
-  transition: width 0.2s, height 0.2s, background 0.2s;
-  mix-blend-mode: difference;
-  backdrop-filter: invert(1);
-}
-
-.custom-cursor.hover {
-  width: 40px;
-  height: 40px;
-  background: rgba(0, 0, 0, 0.3);
-  backdrop-filter: invert(0);
-  mix-blend-mode: normal;
-}
-
-a, button, .stat-item, .filter-tab, .btn-link, .btn-outline, .work-card {
-  cursor: none;
-}
-
 /* ===== 通用容器與排版 ===== */
 .container {
   max-width: 1280px;
@@ -1068,6 +1034,94 @@ footer {
 .work-detail-page .swiper-button-prev.hidden,
 .work-detail-page .swiper-button-next.hidden {
   display: none;
+}
+
+.custom-slideshow {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.slides-window {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.custom-slide {
+  min-width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+}
+
+.custom-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+/* 按鈕樣式 */
+.slide-prev, .slide-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.slide-prev:hover, .slide-next:hover {
+  background: #fff;
+}
+
+.slide-prev {
+  left: 1rem;
+}
+
+.slide-next {
+  right: 1rem;
+}
+
+/* 分頁點樣式 */
+.slides-pagination {
+  text-align: center;
+  padding: 10px 0;
+}
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin: 0 5px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #333;
 }
 
 /* ===== 動畫輔助 (統一使用 .animate) ===== */

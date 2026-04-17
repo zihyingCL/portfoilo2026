@@ -34,9 +34,7 @@
 
             <!-- 原本的 .detail-hero-img 改成 Swiper 容器 -->
             <div class="detail-hero-img swiper mySwiper">
-                <div class="swiper-wrapper" id="work-images-wrapper">
-                    <!-- 圖片將由 JavaScript 動態插入 -->
-                </div>
+                <div class="swiper-wrapper" id="work-images-wrapper"></div>
                 <!-- 如果需要分頁器、前後按鈕 -->
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
@@ -122,7 +120,7 @@
                 </div>
             `).join('');
 
-                    // 初始化 Swiper（不需 preventClicks 相關設定）
+                    // 1. 初始化 Swiper
                     new Swiper('.mySwiper', {
                         loop: true,
                         lazy: true,
@@ -132,9 +130,21 @@
                         observeParents: true,
                     });
 
-                    // 初始化 baguetteBox，指定容器為 .mySwiper
+                    // 🌟 2. 新增這段：強制阻擋 Swiper 內 a 標籤的預設跳轉行為
+                    const swiperContainer = document.querySelector('.mySwiper');
+                    if (swiperContainer) {
+                        swiperContainer.addEventListener('click', function (e) {
+                            // 尋找點擊目標是否為 a 標籤（或從 img 往上找到 a 標籤）
+                            const link = e.target.closest('a');
+                            if (link && link.hasAttribute('data-baguettebox')) {
+                                e.preventDefault(); // 阻止瀏覽器前往 .jpg / .png 網址
+                            }
+                        });
+                    }
+
+                    // 3. 初始化 baguetteBox
                     baguetteBox.run('.mySwiper', {
-                        captions: false,      // 不顯示標題（可依需求調整）
+                        captions: false,
                         buttons: 'auto',
                         async: true
                     });
