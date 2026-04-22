@@ -186,11 +186,11 @@
     "cover": "website/edti/index.jpg",
     "images": [
       "website/edti/index.jpg",
-      "website/edti/sheet2.jpg",
-      "website/edti/sheet.jpg",
-      "website/edti/ewcdiscount.jpg"
+      "website/edti/sheet2.png",
+      "website/edti/sheet.png",
+      "website/edti/ewcdiscount.png"
     ],
-    "intro": "串聯 Google Sheet 做為資料來源同步報價資訊於網頁中。",
+    "intro": "一頁式的服務/活動介紹，串聯 Google Sheet 做為資料來源同步報價資訊於網頁中。",
     "description_long": "為了因應手機回收及各平台行銷需求，判斷來源網址後會呈現不同畫面（與後端搭配，使用 cookie 來做判斷要顯示的內容），串聯 Google Sheet 做為資料來源同步報價資訊於網頁中。",
     "tags": [
       "UI/UX",
@@ -303,8 +303,8 @@
       "website/cathaybd/page.png",
       "website/cathaybd/edm.jpg"
     ],
-    "intro": "",
-    "description_long": "",
+    "intro": "針對 VIP 會員生日禮的活動網站，分為百萬禮與專屬禮，為避免用戶混淆兌換資格，比起華麗的畫面更注重如何將資訊正確的傳達與分類。",
+    "description_long": "針對 VIP 會員生日禮的活動網站，分為百萬禮與專屬禮，為避免用戶混淆兌換資格，比起華麗的畫面更注重如何將資訊正確的傳達與分類。",
     "tags": [
       "UI/UX",
       "HTML/CSS",
@@ -425,9 +425,9 @@
       "img/aso.jpg",
       "images/music-02.jpg"
     ],
-    "intro": "根據行銷部門提供的商品與主題，規劃活動頁與主視覺。",
-    "description_long": "根據行銷部門提供的商品與主題，規劃活動頁與主視覺，主要呈現於各個點數/紅利兌換平台。",
-    "tags": ["活動視覺", "Illustrator", "Photoshop", "社群素材", "Figma"],
+    "intro": "透過文案、預覽圖提升 App 在應用商店的搜索排名、提升曝光與增加自然下載量的行銷策略。",
+    "description_long": "透過文案、預覽圖提升 App 在應用商店的搜索排名、提升曝光與增加自然下載量的行銷策略。進行長尾關鍵詞研究，並使用 A/B test 進行預覽圖的轉化率測試。",
+    "tags": ["Illustrator", "Photoshop", "Figma"],
     "links": [
     ]
   },
