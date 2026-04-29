@@ -252,7 +252,7 @@
       "website/ewc/orderList.jpg"
     ],
     "intro": "",
-    "description_long": "",
+    "description_long": "以原有的舊網站為基底進行翻新，因為商品需要增加子分類，原先的網站並無相關的設計，遂重新開發改動（主要變動首頁、商品列表，其餘預約表單等制式頁面不動）",
     "tags": [
       "UI/UX",
       "HTML/CSS",
@@ -335,7 +335,7 @@
       "website/cathaytk/order_List.jpg"
     ],
     "intro": "",
-    "description_long": "",
+    "description_long": "針對特殊顧客／會員專設的演唱會門票購票通道，比起一般的購票平台流程上會更加簡潔（不提供選座位）",
     "tags": [
       "UI/UX",
       "HTML/CSS",
