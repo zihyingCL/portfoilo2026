@@ -356,10 +356,16 @@
     "category": "graphic",
     "title": "活動行銷",
     "date": "2023-2026",
-    "cover": "images/graphic-01.jpg",
+    "cover": "img/thsr.jpg",
     "images": [
-      "images/graphic-01.jpg",
-      "images/graphic-02.jpg"
+      "img/thsr.jpg",
+      "img/ars2024eyw.jpg",
+      "img/ars2024Q2.jpg",
+      "img/ars2024Q3.jpg",
+      "img/ars2025Q1.jpg",
+      "img/arstwp.jpg",
+      "img/tsmc2025Q2.jpg",
+      "img/tsmcopen.jpg"
     ],
     "intro": "季節性活動行銷設計，包含但不限於活動網頁、Banner、EDM……等。",
     "description_long": "季節性活動行銷設計，包含但不限於活動網頁、Banner、EDM……等。",
@@ -373,10 +379,12 @@
     "category": "graphic",
     "title": "社群平台行銷圖",
     "date": "2020-2026",
-    "cover": "images/music-festival.jpg",
+    "cover": "img/snssingle.jpg",
     "images": [
-      "images/music-01.jpg",
-      "images/music-02.jpg"
+      "img/snsairport.jpg",
+      "img/snsdragonpass.jpg",
+      "img/snssingle.jpg",
+      "img/snssingle2.jpg"
     ],
     "intro": "主要放於社群平台的行銷圖。",
     "description_long": "主要放於社群平台的行銷圖，視覺比例為 1:1 方形。",
