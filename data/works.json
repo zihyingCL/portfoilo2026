@@ -44,8 +44,8 @@
       "website/roambingbar/step.png",
       "website/roambingbar/wifi.png"
     ],
-    "intro": "",
-    "description_long": "",
+    "intro": "建立一個新服務的介紹網站，讓客人可以導向各自的權益銀行子站進行預約。",
+    "description_long": "建立一個新服務的介紹網站，讓客人可以導向各自的權益銀行子站進行預約。現行因為服務單位轉移，此版本的網站已不再使用。",
     "tags": [
       "UI/UX",
       "HTML/CSS",
@@ -111,7 +111,7 @@
     ],
     "links": [
       {
-        "label": "DEMO(原站已下架)",
+        "label": "DEMO(活動已結束)",
         "url": "/website/postesg/index.html",
         "icon": "fas fa-code"
       }
@@ -131,8 +131,8 @@
       "website/parkingbar/export/order.png",
       "website/parkingbar/export/orderlist.png"
     ],
-    "intro": "機場周邊停車場，介紹首頁＋預約頁面。",
-    "description_long": "目標客群為銀行高端卡友，整體採高級尊榮質感及形象。",
+    "intro": "發行新業務的機場周邊停車場，除了介紹首頁，此站也建置了線上預約頁面。",
+    "description_long": "目標客群為銀行高端卡友，整體採高級尊榮質感及形象。目前因服務轉移，網站不再使用。",
     "tags": [
       "UI/UX",
       "HTML/CSS",
@@ -219,8 +219,8 @@
       "website/sogohkp/2.jpg",
       "website/sogohkp/3.jpg"
     ],
-    "intro": "",
-    "description_long": "",
+    "intro": "通常為銀行短期的活動介紹網站，走電話預約服務因此不包含預約表單。",
+    "description_long": "通常為銀行短期的活動介紹網站，走電話預約服務因此不包含預約表單。",
     "tags": [
       "UI/UX",
       "HTML/CSS",
@@ -251,7 +251,7 @@
       "website/ewc/point.png",
       "website/ewc/orderList.jpg"
     ],
-    "intro": "",
+    "intro": "結合服務型商品的預約，因此雖然架構接近購物平台，但其中還是有些細節不同（如：無購物車、單件預約等等機制）。",
     "description_long": "以原有的舊網站為基底進行翻新，因為商品需要增加子分類，原先的網站並無相關的設計，遂重新開發改動（主要變動首頁、商品列表，其餘預約表單等制式頁面不動）",
     "tags": [
       "UI/UX",
@@ -279,7 +279,7 @@
       "img/index2.jpg",
       "img/index3.jpg"
     ],
-    "intro": "",
+    "intro": "以固定的服務預約流程模板，規劃符合銀行需求的預約網頁。",
     "description_long": "根據合約調整提供的權益服務內容，目前公司的服務都有固定的預約欄位與模板（此為公司專案的主力），因此一般是設計不同的登入、首頁及特殊注意事項，後續預約的流程與畫面基本上各網站都是相同的。",
     "tags": [
       "UI/UX",
@@ -334,8 +334,8 @@
       "website/cathaytk/pr_Order_Form-1.jpg",
       "website/cathaytk/order_List.jpg"
     ],
-    "intro": "",
-    "description_long": "針對特殊顧客／會員專設的演唱會門票購票通道，比起一般的購票平台流程上會更加簡潔（不提供選座位）",
+    "intro": "針對特殊顧客／會員專設的演唱會門票購票通道，比起一般的購票平台流程上會更加簡潔（不提供選座位）。",
+    "description_long": "針對特殊顧客／會員專設的演唱會門票購票通道，比起一般的購票平台流程上會更加簡潔（不提供選座位）。",
     "tags": [
       "UI/UX",
       "HTML/CSS",
@@ -367,8 +367,8 @@
       "img/tsmc2025Q2.jpg",
       "img/tsmcopen.jpg"
     ],
-    "intro": "季節性活動行銷設計，包含但不限於活動網頁、Banner、EDM……等。",
-    "description_long": "季節性活動行銷設計，包含但不限於活動網頁、Banner、EDM……等。",
+    "intro": "季節性活動行銷設計，包含但不限於活動網頁、Banner、EDM……等一系列的行銷素材。",
+    "description_long": "季節性活動行銷設計，包含但不限於活動網頁、Banner、EDM……等一系列的行銷素材。",
     "tags": ["活動視覺", "Photoshop", "Illustrator", "社群素材", "Figma"],
     "links": [
     ],
@@ -422,22 +422,6 @@
     "links": [
     ],
     "isFeatured": true
-  },
-  {
-    "id": "aso",
-    "category": "graphic",
-    "title": "ASO",
-    "date": "2019",
-    "cover": "img/aso.jpg",
-    "images": [
-      "img/aso.jpg",
-      "images/music-02.jpg"
-    ],
-    "intro": "透過文案、預覽圖提升 App 在應用商店的搜索排名、提升曝光與增加自然下載量的行銷策略。",
-    "description_long": "透過文案、預覽圖提升 App 在應用商店的搜索排名、提升曝光與增加自然下載量的行銷策略。進行長尾關鍵詞研究，並使用 A/B test 進行預覽圖的轉化率測試。",
-    "tags": ["Illustrator", "Photoshop", "Figma"],
-    "links": [
-    ]
   },
   {
     "id": "othergraphics",
