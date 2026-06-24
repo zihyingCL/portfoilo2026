@@ -422,21 +422,5 @@
     "links": [
     ],
     "isFeatured": true
-  },
-  {
-    "id": "othergraphics",
-    "category": "graphic",
-    "title": "其他設計內容",
-    "date": "2020-2026",
-    "cover": "images/music-festival.jpg",
-    "images": [
-      "images/music-01.jpg",
-      "images/music-02.jpg"
-    ],
-    "intro": "根據行銷部門提供的商品與主題，規劃活動頁與主視覺。",
-    "description_long": "根據行銷部門提供的商品與主題，規劃活動頁與主視覺，主要呈現於各個點數/紅利兌換平台。",
-    "tags": ["活動視覺", "Illustrator", "Photoshop", "社群素材", "Figma"],
-    "links": [
-    ]
   }
 ]

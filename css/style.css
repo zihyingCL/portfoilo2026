@@ -160,6 +160,7 @@ section {
   letter-spacing: 2px;
   -webkit-transition: all var(--transition-base);
   transition: all var(--transition-base);
+  border-radius: 30px;
 }
 .btn-outline:hover {
   background-color: var(--color-text);
@@ -217,41 +218,6 @@ section {
 }
 
 /* ===== HERO 區塊 ===== */
-.hero {
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #eef2f5;
-  position: relative;
-  overflow: hidden;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 3;
-}
-.hero-content {
-  position: relative;
-  z-index: 10;
-  max-width: 900px;
-  margin-left: 10%;
-  color: #1a1a1a;
-}
-@media (max-width: 48rem) {
-  .hero-content {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
 .hero-subtitle {
   font-size: 1.2rem;
   letter-spacing: 6px;
@@ -298,8 +264,8 @@ section {
   display: flex;
   gap: 60px;
   opacity: 0;
-  -webkit-animation: fadeUpScale 0.6s 0.6s forwards;
-          animation: fadeUpScale 0.6s 0.6s forwards;
+  -webkit-animation: fadeUp 0.6s 0.6s forwards;
+          animation: fadeUp 0.6s 0.6s forwards;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -435,65 +401,208 @@ section {
             transform: scale(1);
   }
 }
-.hero-parallax {
-  background: #eef2f5;
+/* ===== HERO 區塊 NEW ===== */
+.hero {
+  min-height: 100vh;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
+  border: no-button;
 }
-.hero-parallax .parallax-bg {
+.hero-content {
+  width: 100%;
+  padding: 0 8%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 100px;
+}
+@media (max-width: 75rem) {
+  .hero-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-top: 150px;
+  }
+}
+@media (max-width: 48rem) {
+  .hero-content {
+    padding: 130px 30px 80px;
+  }
+}
+.hero-left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.hero-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  height: 600px;
+}
+@media (max-width: 75rem) {
+  .hero-right {
+    width: 100%;
+    height: 500px;
+  }
+}
+.hero-title {
+  font-size: clamp(55px, 7vw, 95px);
+  line-height: 1;
+  margin-bottom: 35px;
+}
+@media (max-width: 48rem) {
+  .hero-title {
+    font-size: 58px;
+  }
+}
+.hero-title span {
+  color: #6b7cff;
+}
+.hero-desc {
+  max-width: 500px;
+  color: #666;
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #7a7a7a;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.mockup {
   position: absolute;
-  top: 0;
-  left: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+  -webkit-box-shadow: 0 40px 100px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 40px 100px rgba(0, 0, 0, 0.12);
+}
+.mockup-main {
+  width: 550px;
+  height: 350px;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media (max-width: 75rem) {
+  .mockup-main {
+    width: 100%;
+    right: auto;
+  }
+}
+@media (max-width: 48rem) {
+  .mockup-main {
+    height: 240px;
+  }
+}
+.mockup-main img {
   width: 100%;
   height: 100%;
-  z-index: 1;
-  overflow: hidden;
-  pointer-events: none;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-.hero-parallax .parallax-bg .parallax-shape {
+.mockup-small {
+  width: 260px;
+  height: 220px;
+  left: 0;
+  top: 60%;
+}
+@media (max-width: 75rem) {
+  .mockup-small {
+    width: 220px;
+    height: 180px;
+    top: 65%;
+  }
+}
+@media (max-width: 48rem) {
+  .mockup-small {
+    width: 180px;
+    height: 150px;
+  }
+}
+.mockup-small img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-ui {
+  padding: 30px;
+}
+.card-ui h4 {
+  margin-bottom: 10px;
+}
+.card-ui p {
+  color: #888;
+}
+
+.colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+}
+.colors span {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #ddd;
+}
+
+.glow {
   position: absolute;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.03);
-  -webkit-transition: -webkit-transform 0.05s linear;
-  transition: -webkit-transform 0.05s linear;
-  transition: transform 0.05s linear;
-  transition: transform 0.05s linear, -webkit-transform 0.05s linear;
-  will-change: transform;
+  -webkit-filter: blur(120px);
+          filter: blur(120px);
+  z-index: -1;
 }
-.hero-parallax .parallax-bg .shape-1 {
-  width: 70vw;
-  height: 70vw;
-  top: -15%;
-  left: -15%;
-  background: rgba(0, 0, 0, 0.02);
+.glow1 {
+  width: 450px;
+  height: 450px;
+  background: #8ea7ff;
+  top: -100px;
+  right: -100px;
 }
-.hero-parallax .parallax-bg .shape-2 {
-  width: 50vw;
-  height: 50vw;
-  bottom: -10%;
-  right: -5%;
-  background: rgba(0, 0, 0, 0.04);
+.glow2 {
+  width: 300px;
+  height: 300px;
+  background: #d8f3ff;
+  bottom: 150px;
+  left: 10%;
 }
-.hero-parallax .parallax-bg .shape-3 {
-  width: 35vw;
-  height: 35vw;
-  top: 40%;
-  left: 70%;
-  background: rgba(0, 0, 0, 0.025);
+
+.scroll {
+  margin-top: 100px;
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: #888;
 }
-.hero-parallax .parallax-bg .shape-4 {
-  width: 25vw;
-  height: 25vw;
-  bottom: 20%;
-  left: 20%;
-  background: rgba(0, 0, 0, 0.035);
-}
-.hero-parallax .parallax-bg .shape-5 {
-  width: 45vw;
-  height: 45vw;
-  top: 10%;
-  right: 20%;
-  background: rgba(0, 0, 0, 0.015);
+@media (max-width: 48rem) {
+  .scroll {
+    display: none;
+  }
 }
 
 /* ===== 作品卡片 (通用) ===== */
@@ -505,7 +614,8 @@ section {
   transition: -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   transition: transform 0.4s ease, box-shadow 0.4s ease, -webkit-transform 0.4s ease, -webkit-box-shadow 0.4s ease;
-  border-radius: 0;
+  border-radius: 30px;
+  overflow: hidden;
 }
 .work-card:hover {
   -webkit-transform: translateY(-10px);
@@ -752,7 +862,8 @@ section {
   height: 500px;
   background-image: url("../img/user.png");
   background-size: cover;
-  background-position: top center;
+  background-position: center 30%;
+  border-radius: 30px;
 }
 
 .skill-section {

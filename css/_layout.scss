@@ -70,6 +70,8 @@ section {
   letter-spacing: 2px;
   transition: all var(--transition-base);
 
+  border-radius: 30px;
+
   &:hover {
     background-color: var(--color-text);
     color: #fff;
@@ -120,37 +122,37 @@ section {
 
 /* ===== HERO 區塊 ===== */
 .hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  // background: linear-gradient(135deg, #ececec 0%, #cfcfcf 100%);
-  background: #eef2f5;
-  position: relative;
-  overflow: hidden;
+  // height: 100vh;
+  // display: flex;
+  // align-items: center;
+  // // background: linear-gradient(135deg, #ececec 0%, #cfcfcf 100%);
+  // background: #eef2f5;
+  // position: relative;
+  // overflow: hidden;
 
-  &-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 3;
-  }
+  // &-overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  //   pointer-events: none;
+  //   z-index: 3;
+  // }
 
-  &-content {
-    position: relative;
-    z-index: 10;
-    max-width: 900px;
-    margin-left: 10%;
-    color: #1a1a1a;
+  // &-content {
+  //   position: relative;
+  //   z-index: 10;
+  //   max-width: 900px;
+  //   margin-left: 10%;
+  //   color: #1a1a1a;
 
-    @media (max-width: $bp-md) {
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-  }
+  //   @media (max-width: $bp-md) {
+  //     margin-left: 5%;
+  //     margin-right: 5%;
+  //   }
+  // }
 
   &-subtitle {
     font-size: 1.2rem;
@@ -194,7 +196,7 @@ section {
     display: flex;
     gap: 60px;
     opacity: 0;
-    animation: fadeUpScale 0.6s 0.6s forwards;
+    animation: fadeUp 0.6s 0.6s forwards;
     flex-wrap: wrap;
 
     @media (max-width: $bp-md) {
@@ -289,66 +291,243 @@ section {
 }
 
 // ===== 方案 C：滑鼠視差背景（效能優化版）=====
-.hero-parallax {
-  background: #eef2f5;
+// .hero-parallax {
+//   background: #eef2f5;
+//   position: relative;
+//   overflow: hidden;
+
+//   .parallax-bg {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: 1;
+//     overflow: hidden;
+//     pointer-events: none; // 讓滑鼠事件穿透
+
+//     .parallax-shape {
+//       position: absolute;
+//       border-radius: 50%;
+//       background: rgba(0, 0, 0, 0.03);
+//       transition: transform 0.05s linear; // 極短過渡，讓移動更平滑
+//       will-change: transform;
+//     }
+
+//     // 不同大小、位置、深淺的圓形
+//     .shape-1 {
+//       width: 70vw;
+//       height: 70vw;
+//       top: -15%;
+//       left: -15%;
+//       background: rgba(0, 0, 0, 0.02);
+//     }
+//     .shape-2 {
+//       width: 50vw;
+//       height: 50vw;
+//       bottom: -10%;
+//       right: -5%;
+//       background: rgba(0, 0, 0, 0.04);
+//     }
+//     .shape-3 {
+//       width: 35vw;
+//       height: 35vw;
+//       top: 40%;
+//       left: 70%;
+//       background: rgba(0, 0, 0, 0.025);
+//     }
+//     .shape-4 {
+//       width: 25vw;
+//       height: 25vw;
+//       bottom: 20%;
+//       left: 20%;
+//       background: rgba(0, 0, 0, 0.035);
+//     }
+//     .shape-5 {
+//       width: 45vw;
+//       height: 45vw;
+//       top: 10%;
+//       right: 20%;
+//       background: rgba(0, 0, 0, 0.015);
+//     }
+//   }
+// }
+
+/* ===== HERO 區塊 NEW ===== */
+.hero {
+  min-height: 100vh;
   position: relative;
+  display: flex;
+  align-items: center;
   overflow: hidden;
+  border: no-button;
 
-  .parallax-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
+  &-content {
     width: 100%;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
-    pointer-events: none; // 讓滑鼠事件穿透
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
 
-    .parallax-shape {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, 0.03);
-      transition: transform 0.05s linear; // 極短過渡，讓移動更平滑
-      will-change: transform;
+    @media (max-width: $bp-xl) {
+      flex-direction: column;
+      padding-top: 150px;
     }
 
-    // 不同大小、位置、深淺的圓形
-    .shape-1 {
-      width: 70vw;
-      height: 70vw;
-      top: -15%;
-      left: -15%;
-      background: rgba(0, 0, 0, 0.02);
-    }
-    .shape-2 {
-      width: 50vw;
-      height: 50vw;
-      bottom: -10%;
-      right: -5%;
-      background: rgba(0, 0, 0, 0.04);
-    }
-    .shape-3 {
-      width: 35vw;
-      height: 35vw;
-      top: 40%;
-      left: 70%;
-      background: rgba(0, 0, 0, 0.025);
-    }
-    .shape-4 {
-      width: 25vw;
-      height: 25vw;
-      bottom: 20%;
-      left: 20%;
-      background: rgba(0, 0, 0, 0.035);
-    }
-    .shape-5 {
-      width: 45vw;
-      height: 45vw;
-      top: 10%;
-      right: 20%;
-      background: rgba(0, 0, 0, 0.015);
+    @media (max-width: $bp-md) {
+        padding: 130px 30px 80px;
     }
   }
+
+  &-left {
+    flex: 1;
+  }
+  &-right {
+    flex: 1;
+    position: relative;
+    height: 600px;
+
+    @media (max-width: $bp-xl) {
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  &-title {
+    font-size: clamp(55px, 7vw, 95px);
+    line-height: 1;
+    margin-bottom: 35px;
+
+     @media (max-width: $bp-md) {
+      font-size: 58px;
+     }
+
+    span {
+      color: #6b7cff;
+    }
+  }
+
+  &-desc {
+    max-width: 500px;
+    color: #666;
+    line-height: 1.8;
+    font-size: 18px;
+  }
+}
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #7a7a7a;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.mockup {
+  position: absolute;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.12);
+  &-main {
+    width: 550px;
+    height: 350px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    @media (max-width: $bp-xl) {
+      width: 100%;
+      right: auto;
+    }
+
+    @media (max-width: $bp-md) {
+      height: 240px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-small {
+    width: 260px;
+    height: 220px;
+    left: 0;
+    top: 60%;
+
+    @media (max-width: $bp-xl) {
+      width: 220px;
+      height: 180px;
+      top: 65%;
+    }
+
+     @media (max-width: $bp-md) {
+        width: 180px;
+                height: 150px;
+     }
+         img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.card-ui {
+  padding: 30px;
+  h4 {
+    margin-bottom: 10px;
+  }
+  p {
+    color: #888;
+  }
+}
+
+.colors {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+  span {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #ddd;
+  }
+}
+
+.glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+
+  &1 {
+    width: 450px;
+    height: 450px;
+    background: #8ea7ff;
+    top: -100px;
+    right: -100px;
+  }
+
+  &2 {
+    width: 300px;
+    height: 300px;
+    background: #d8f3ff;
+    bottom: 150px;
+    left: 10%;
+  }
+}
+
+.scroll {
+  margin-top: 100px;
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: #888;
+
+   @media (max-width: $bp-md) {
+    display: none;
+   }
 }
 
 /* ===== 作品卡片 (通用) ===== */
@@ -358,7 +537,8 @@ section {
   transition:
     transform 0.4s ease,
     box-shadow 0.4s ease;
-  border-radius: 0;
+  border-radius: 30px;
+  overflow: hidden;
 
   &:hover {
     transform: translateY(-10px);
@@ -585,9 +765,10 @@ section {
 .about-photo {
   background-color: #c4c4c4;
   height: 500px;
-  background-image: url('../img/user.png');
+  background-image: url("../img/user.png");
   background-size: cover;
-  background-position: top center;
+  background-position: center 30%;
+  border-radius: 30px;
 }
 
 .skill-section {
@@ -780,6 +961,7 @@ footer {
         .btn-outline {
           width: 100%;
           text-align: center;
+          
         }
       }
     }
