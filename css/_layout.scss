@@ -372,12 +372,12 @@ section {
 
     @media (max-width: $bp-xl) {
       flex-direction: column;
-      padding-top: 150px;
+      margin-top:-100px;
     }
 
-    @media (max-width: $bp-md) {
-        padding: 130px 30px 80px;
-    }
+    // @media (max-width: $bp-md) {
+    //     padding: 130px 30px 80px;
+    // }
   }
 
   &-left {
@@ -391,6 +391,7 @@ section {
     @media (max-width: $bp-xl) {
       width: 100%;
       height: 500px;
+      margin-top: 100px;
     }
   }
 
